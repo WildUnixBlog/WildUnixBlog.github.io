@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Guía rápida para usar virtualenv &middot; </title>
+    <title>Crear un QRC con LaTeX e incluirlo en un fichero LaTeX &middot; </title>
     
     <meta name="description" content="Blog cooperativo de Yábir Benchakhtir y M. García dedicado a ayudar a usuarios de Unix y programadores de Python y Haskell">
     <meta name="generator" content="Hugo 0.37.1" />
@@ -55,10 +55,10 @@
     
 <article class="post">
     <header>
-        <h1 class="post-title">Guía rápida para usar virtualenv</h1>
+        <h1 class="post-title">Crear un QRC con LaTeX e incluirlo en un fichero LaTeX</h1>
         <div class="post-meta">
-            <time datetime="20 March 2016">
-                20 March 2016
+            <time datetime="08 March 2018">
+                08 March 2018
             </time>
         </div>
     </header>
@@ -66,41 +66,94 @@
     <section class="post-content">
         
 
-<h2 id="qué-es-virtualenv">¿Qué es Virtualenv?</h2>
+<h2 id="introducción">Introducción</h2>
 
-<p>Como dice en su propia <a href="https://virtualenv.pypa.io/en/latest/">documentacion</a> documentación es una herramienta para crear entornos aislados para python ¿Y qué tiene esto de bueno? Pues que un un mismo odenador podemos tener distintas versiones de librerias o incluso ¡distintas versiones del propio python! Esto es realmente útil cuando queremos hacer por ejemplo pruebas de un código en distintas versiones o replicar una instalación de otro ordenador. Además nos permite evitar instalar librerías a nivel global por lo que evitamos posibles problemas o incluso podemos comparar entre versiones.</p>
+<p>Los usuarios de LaTeX se muestran reacios a usar otras herramientas si
+pueden servirse de su preciado compilador para editar y que se
+comporta como una verdadera imprenta. En este post venimos a ayudarlos
+y a darles una razón más para seguir con &ldquo;LaTeX para todo&rdquo;.</p>
 
-<h2 id="cómo-lo-instalo">¿Cómo lo instalo?</h2>
+<p>No hay que glosar la gran utilidad que tiene hoy codificar las
+direcciones de internet en códigos QR de forma que se pueda acceder a
+ellas desde dispositivos móviles. Estamos en la era de la inmediatez
+&hellip; para lo bueno y para lo malo. Y también LaTeX sirve para esto.</p>
 
-<p>Lo podemos instalar usando apt-get con la orden:
-<code>$ sudo apt-get install python-virtualenv</code>
-O bien con pip (1.3 o mayor):
-<code>$ sudo pip install virtualenv</code></p>
+<p>En lo que sigue daremos la receta precisa para generar un código QR
+con LaTeX y luego diremos como incluirlo en nuestro pdf generado con
+LaTeX.</p>
 
-<h2 id="cómo-creamos-un-entorno">¿Cómo creamos un entorno?</h2>
+<h2 id="generación-del-código-qr">Generación del código QR</h2>
 
-<p>Cuando vamos a crear un nuevo entorno virtual solo tenemos que tener en cuenta la versión de python que queremos usar. Por defecto usa aquella con la que se instaló virtualenv. Para crearlo usamos la orden:</p>
+<p>Con el editor preferido haremos un fichero, digamos <code>miQRC.tex</code>, con
+el siguiente contenido:</p>
 
-<p><code>$ virtualenv -p python3 nombre_del_directorio</code></p>
+<pre><code>\documentclass[12pt]{article}
 
-<p>De este modo indicamos que queremos crear un entorno virtual, con la opcion &ldquo;p&rdquo; (-p) indicamos que vamos a usar una versión concreta de python, en este caso le digo que quiero usar python3 (que es el nombre que en mi path carga python3, también podemos usar la ruta hasta el directorio de python como argumento. Ej: <code>/usr/bin/python3</code>) y el otro argumento que le pasamos, y que es obligatorio, es el nombre de la carpeta donde se va a crear el entorno. Puede ser una carpeta tanto nueva como existente.</p>
+\usepackage{pst-barcode, auto-pst-pdf}
 
-<h3 id="y-para-usarlo">¿Y&hellip; para usarlo?</h3>
+\begin{document}
 
-<p>Pues es bastante simple. Tenemos que acceder a la carpeta donde esta nuestro directorio</p>
+\begin{pspicture}
+    \psbarcode{http://wildunix.es/}{}{qrcode}
+\end{pspicture}
 
-<p><code>$ cd nombre_del_directorio</code></p>
+\end{document}
+</code></pre>
 
-<p>y una vez dentro activamos el entorno con la orden:</p>
+<p>y por supuesto que en lugar de la dirección</p>
 
-<p><code>$ source bin/activate</code></p>
+<pre><code>http://wildunix.es/ 
+</code></pre>
 
-<p>Ahora podriamos instalar cualquier libreria con pip y solo estaría disponible en ese entorno. Hay que tener en cuenta que para nuestro código funcione tendremos que tener el entorno activado. Cuando esta activado antes de nuestro nombre de usuario en la terminal sale entre paréntesis el nombre del entorno que hemos creado.
-Para cerrar el entorno ejecutamos la orden:</p>
+<p>pondremos la nuestra o lo que queramos. Seguidamente abrimos la
+terminal (<code>Ctrl + Alt + t</code>) y con la orden <code>cd</code> nos desplazamos hasta
+el lugar en donde tenemos el fichero <code>miQRC.tex</code>. Hecho esto
+ejecutamos desde la terminal la orden:</p>
 
-<p><code>$ deactivate</code></p>
+<pre><code>pdflatex -shell-escape miQRC
+</code></pre>
 
-<p>Y esto es todo por hoy.</p>
+<p>Como pueden ver, se han generado varios ficheros tras la ejecución de
+la anterior orden; pues bien, nos interesa por ahora el que se llama
+<code>miQRC-pics.pdf</code>. Éste será el fichero a incrustar en cualquier
+fichero LaTeX.</p>
+
+<p>##Inclusión del código QR en un fichero LaTeX</p>
+
+<p>Supongamos que el fichero <code>miQRC-pics.pdf</code> está alojado en el directorio</p>
+
+<pre><code>/home/miUsuario/Documentos/taller/
+</code></pre>
+
+<p>por supuesto que <code>miUsuario</code> será para cada cual un nombre como:
+<code>luisaquero</code>, <code>albertml</code>, etc. &hellip; cada cual tendrá su usuario
+preferido. Ahora llega el momento de edita nuestro fichero de texto
+que deseamos contenga el QRC. Tiene que incluir al menos lo siguiente
+en su estructura:</p>
+
+<pre><code>\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[absolute]{textpos}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\begin{textblock*}{297mm}(-4mm,135mm)
+\includegraphics[scale=1]{/home/miUsuario/Documentos/taller/miQRC-pics.pdf}
+\end{textblock*}
+
+\end{document}
+</code></pre>
+
+<p>y logicamente pondremos el texto que nos interese entre el
+<code>\begin{document}</code> y el <code>\end{document}</code>. Hecho esto podemos compilar
+en la forma habitual con <code>pdflatex</code>, es decir, con el formato que
+genera un pdf como resultado. Por supuesto que cada cual puede jugar
+con los números que aparecen arriba: <code>297, -4, 135</code> y así podrá situar
+el cuadradito del código QR con el tamaño y en el lugar que prefiera
+del texto.</p>
+
+<p>Y &hellip; esto es todo por hoy.</p>
 
     </section>
 
