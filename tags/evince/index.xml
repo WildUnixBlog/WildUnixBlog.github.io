@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Emacs on </title>
-    <link>https://wildunix.es/tags/emacs/</link>
-    <description>Recent content in Emacs on </description>
+    <title>Evince on </title>
+    <link>https://wildunix.es/tags/evince/</link>
+    <description>Recent content in Evince on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://wildunix.es/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wildunix.es/tags/evince/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>https://wildunix.es/posts/emacs_evince/</guid>
       <description>Introducción Por alguna razón que desconocemos, nuestro dúo preferido para editar ficheros LaTeX &amp;mdash;emacs y auxtex&amp;mdash; no viene preconfigurado en Ubuntu para usar por defecto el formato pdflatex y el visor Evince. Por una parte creemos desfasado compilar con LaTeX para crear un .dvi y por otra, la mayoría de visores no actualizan automáticamente un .pdf si éste ha sido modificado; no es el caso de Evince. Por tanto, queremos que al compilar los .</description>
-    </item>
-    
-    <item>
-      <title>Instalar ELPA para Emacs 23</title>
-      <link>https://wildunix.es/posts/instalar-elpa-para-emacs-23/</link>
-      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://wildunix.es/posts/instalar-elpa-para-emacs-23/</guid>
-      <description>Introducción Los usuarios de Emacs saben de su editor preferido varias cosas: la independencia que les ha proporcionado del ratón por vernir de un tiempo en el que se vivía sin ratón, la sensación de control pleno que les confiere, la potencia del mismo y también la dificultad de su configuración al ir un poquitín más allá de lo elemental.
-En particular es complicada la gestión de instalar complementos para Emacs.</description>
     </item>
     
   </channel>

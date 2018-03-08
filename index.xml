@@ -6,10 +6,29 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Mon, 20 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wildunix.es/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adecuar emacs para usar Pdflatex y Evince por defecto</title>
+      <link>https://wildunix.es/posts/emacs_evince/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wildunix.es/posts/emacs_evince/</guid>
+      <description>Introducción Por alguna razón que desconocemos, nuestro dúo preferido para editar ficheros LaTeX &amp;mdash;emacs y auxtex&amp;mdash; no viene preconfigurado en Ubuntu para usar por defecto el formato pdflatex y el visor Evince. Por una parte creemos desfasado compilar con LaTeX para crear un .dvi y por otra, la mayoría de visores no actualizan automáticamente un .pdf si éste ha sido modificado; no es el caso de Evince. Por tanto, queremos que al compilar los .</description>
+    </item>
+    
+    <item>
+      <title>Crear un QRC con LaTeX e incluirlo en un fichero LaTeX</title>
+      <link>https://wildunix.es/posts/qrc_latex/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wildunix.es/posts/qrc_latex/</guid>
+      <description>Introducción Los usuarios de LaTeX se muestran reacios a usar otras herramientas si pueden servirse de su preciado compilador para editar y que se comporta como una verdadera imprenta. En este post venimos a ayudarlos y a darles una razón más para seguir con &amp;ldquo;LaTeX para todo&amp;rdquo;.
+No hay que glosar la gran utilidad que tiene hoy codificar las direcciones de internet en códigos QR de forma que se pueda acceder a ellas desde dispositivos móviles.</description>
+    </item>
     
     <item>
       <title>Instalar SageMath en Mac OS , Windows, Ubuntu y otros Linux</title>
@@ -129,7 +148,7 @@ Introducción Django es un framework de desarrollo web eficiente, versátil y di
       
       <guid>https://wildunix.es/posts/instalar-ipython-mediante-pip-en-ubuntu-y-mac-os-x/</guid>
       <description>Introducción Una vez que hemos decido no hacer frente a los gastos del uso legal de Mathematica y hemos desechado la ideas usar Maxima por las razones ya bien conocidas, una buena apuesta es llamar a la puerta de Python y servirse de las herramientas que se han derivado de él en la última década; nos referimos a sagemath e IPython.
-A la instalación de sagemath le hemos dedicado un post en Wildunix.</description>
+A la instalación de sagemath le hemos dedicado un instructivo post en Ubuntu Driver.</description>
     </item>
     
     <item>
