@@ -6,10 +6,20 @@
     <description>Recent content in Latex on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wildunix.es/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Un Resumen de Atajos Fundamentales de emacs</title>
+      <link>https://wildunix.es/posts/emacs/</link>
+      <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wildunix.es/posts/emacs/</guid>
+      <description>Introducción Cada usuario de emacs tiene sus atajos predilectos. A continución enumeramos los nuestros, los que atesoramos, los que más hemos usado con el paso del tiempo.
+La productividad está en proporción directa con el número de atajos usados; eres tanto más productivo cuanto menos llevas las manos al ratón. Es así como hemos comprendido que emacs es el mejor aliado en el escritorio, puede que también el único.</description>
+    </item>
     
     <item>
       <title>Adecuar emacs para usar Pdflatex y Evince por defecto</title>
