@@ -7,7 +7,7 @@
     <title>Configurar Django con Nginx, Gunicorn, virtualenv, supervisor y PostgreSQL &middot; </title>
     
     <meta name="description" content="Blog cooperativo de Yábir Benchakhtir y M. García dedicado a ayudar a usuarios de Unix y programadores de Python y Haskell">
-    <meta name="generator" content="Hugo 0.38.2" />
+    <meta name="generator" content="Hugo 0.47.1" />
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -357,7 +357,7 @@ hello    11604  0.5  0.3  66604 16052 ?        S    14:52   0:00 gunicorn: worke
 
 <p>Cuando <code>Supervisor</code> este instalado, usted puede asignarle programas que iniciar y vigilar creando archivos en la carpeta <code>/etc/supervisor/conf.d</code>. Para nuestra aplicación <code>hello</code> crearemos un archivo llamado  <code>/etc/supervisor/conf.d/hello.conf</code> con el siguiente contenido:</p>
 
-<script src="//gist.github.com/postrational/5747293.js?file=hello.conf"></script>
+<script type="application/javascript" src="//gist.github.com/postrational/5747293.js?file=hello.conf"></script>
 
 <p>Puede asignarle muchas <a href="http://supervisord.org/configuration.html#program-x-section-settings">más opciones</a>, pero esta configuración básica debería ser suficiente.</p>
 
@@ -407,7 +407,7 @@ el directorio <code>/etc/nginx/sites-available</code>. Pude seleccionar qué sit
 
 <p>Cree un nuevo archivo de configuración de Nginx para su aplicación de Django funcionando en <code>example.com</code> en <code>/etc/nginx/sites-available/hello</code>. El archivo debería contener algo parecido a las siguientes líneas. Una explicación más detallada está disponible de parte de <a href="https://github.com/benoitc/gunicorn/blob/master/examples/nginx.conf">los desarrolladores de Gunicorn.</a></p>
 
-<script src="//gist.github.com/postrational/5747293.js"></script>
+<script type="application/javascript" src="//gist.github.com/postrational/5747293.js"></script>
 
 <p>Cree un enlace simbólico en la carpeta <code>sites-enabled</code>:</p>
 
@@ -541,6 +541,35 @@ el directorio <code>/etc/nginx/sites-available</code>. Pude seleccionar qué sit
     });
 </script>
 <script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
 
 
 </body>

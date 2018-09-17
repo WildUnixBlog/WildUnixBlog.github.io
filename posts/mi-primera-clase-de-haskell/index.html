@@ -7,7 +7,7 @@
     <title>Mi Primera Clase de Haskell &middot; </title>
     
     <meta name="description" content="Blog cooperativo de Yábir Benchakhtir y M. García dedicado a ayudar a usuarios de Unix y programadores de Python y Haskell">
-    <meta name="generator" content="Hugo 0.38.2" />
+    <meta name="generator" content="Hugo 0.47.1" />
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -91,7 +91,7 @@ evaluar una expresión compuesta depende únicamente del resultado de
 evaluar las subexpresiones que la componen y de nada más; no depende
 de la historia del programa en ejecución ni del orden de evaluación de
 las subexpresiones que la componen. Esta propiedad no se da en
-lenguajes imperativos, donde abundan los efectos cmolaterales por
+lenguajes imperativos, donde abundan los efectos colaterales por
 asignaciones destructivas. Veamos a Python, que no tiene la
 transparencia referencial, en un ejercicio de violación de la
 misma. Para ello consideremos el retazo de código siguiente que
@@ -129,7 +129,7 @@ reclama, y consigue por serlo, es la recuperación de concepto
 
 <p>En estas páginas hemos hablado ya de un subparadigma del paradigma de
 programación declarativa cuando presentamos el post de
-<a href="https://wildunix.es/posts/mi-primera-clase-de-prolog/">Prolog</a>:
+<a href="http://ubuntudriver.blogspot.com.es/2012/05/mi-primera-clase-de-prolog.html">Prolog</a>:
 la
 <a href="http://es.wikipedia.org/wiki/Programaci%C3%B3n_l%C3%B3gica">programación lógica</a>. Tal
 paradigma está fundamentado por la
@@ -197,7 +197,7 @@ tediosas de programar.</p>
 plataforma completa. En Ubuntu, cuando ésta está disponible, la
 instalación es trivial:</p>
 
-<pre><code>sudo apt-get install haskell-platform
+<pre><code>sudo apt install haskell-platform
 </code></pre>
 
 <p>y si somos felices usuarios de Mac OS X con
@@ -230,7 +230,94 @@ sería utilizando la orden en línea llamada cabal:</p>
 
 <p>lo cual instalará el paquete <code>xmonad</code> además de todas sus dependencias.</p>
 
-<h2 id="en-cuanto-al-editor">En cuanto al editor</h2>
+<p>Una opción de gran interés, acaso imprescindible, es <a href="https://docs.haskellstack.org/en/stable/install_and_upgrade/">instalar Haskell
+a través de
+<code>stack</code></a>. Para
+los sistemas Unix comunes, incluido macOS, la instalación se llevará a
+cabo con la orden:</p>
+
+<pre><code>curl -sSL https://get.haskellstack.org/ | sh
+</code></pre>
+
+<p>o bien, si se prefiere mediante <code>wget</code> (en macOS habría que instalar
+<code>wget</code> antes mediante <code>brew</code>, por ejemplo) con la orden:</p>
+
+<pre><code>wget -qO- https://get.haskellstack.org/ | sh
+</code></pre>
+
+<p>Alternativamente en macOS se instala también <code>stack</code> mediante <code>brew</code>
+con la orden:</p>
+
+<pre><code>brew install stack
+</code></pre>
+
+<p>Para Windows,
+<a href="https://docs.haskellstack.org/en/stable/install_and_upgrade/#windows">aquí</a>
+encontrará instrucciones y un instalador adecuado a su aquitectura.</p>
+
+<p>Vía <code>stack</code> tendremos <code>GHC</code> aislado del resto del sistema y todas las
+órdenes sobre Haskell deberán comenzar por <code>stack</code>, por ejemplo:</p>
+
+<pre><code>stack ghc
+stack ghci
+stack runhaskell
+</code></pre>
+
+<p>La forma de proceder para un proyecto es la siguiente:</p>
+
+<pre><code>stack new my-project-name simple
+</code></pre>
+
+<p>lo que crea la carpeta <code>my-project-name</code> (puede ser este nombre u otro) y
+dentro estará la subcaperta <code>src</code> que es donde pondremos todo lo
+programado. En particular tendremos allí por defecto un fichero
+<code>Main.hs</code> que para la prueba contiene el <code>hola mundo</code>, pero este fichero
+puede ser cambiado al contenido conveniente. Desde <code>src</code> o desde <code>my-project-name</code>
+podemos ejecutar</p>
+
+<pre><code>stack exec my-project-name
+</code></pre>
+
+<p>y con ello se interpreta el <code>Main.hs</code>.</p>
+
+<p>Son necesarios los siguientes parámetros para la plantilla pero no
+están provistos: <code>author-email</code>, <code>author-name</code>, <code>category</code>,
+<code>copyright</code> y <code>github-username</code>.</p>
+
+<p>Puede proveerlos en su macOS en <code>/Users/miUsuario/.stack/config.yaml</code>
+o en su sistema Linux en <code>/Users/miUsuario/.stack/config.yaml</code> de la
+siguiente forma:</p>
+
+<pre><code>templates:
+ params:
+  author-email: value
+  author-name: value
+  category: value
+  copyright: value
+  github-username: value
+</code></pre>
+
+<p>o puede pasarlos cada uno como parámetro así:</p>
+
+<pre><code>stack new mainExample simple -p &quot;author-email:value&quot; -p &quot;author-name:value&quot; \ 
+    -p &quot;category:value&quot; -p &quot;copyright:value&quot; -p &quot;github-username:value”
+</code></pre>
+
+<p>Cuando vamos a otro equipo que por estar sincronizado comparte el
+directorio <code>my-project-name</code>, puede que hayamos sido debidamente
+cuidadosos y no hayamos compartido los ficheros de configuración de la
+forma <code>.configfile</code>; deberá ejecutar allí, dentro de la carpeta
+<code>my-project-name</code>, la orden:</p>
+
+<pre><code>stack build
+</code></pre>
+
+<p>y ya funcionará desde ella o desde su subcarpeta <code>src</code> la orden:</p>
+
+<pre><code>stack exec my-project-name
+</code></pre>
+
+<h2 id="en-cuanto-al-editor">En Cuanto al Editor</h2>
 
 <p>Siempre decimos que nuestros lectores pueden usar su editor preferido,
 sin embargo en este caso hay algunas restricciones. Nunca nunca
@@ -242,16 +329,15 @@ caracteres no imprimibles. Hemos visto a compañeros y profesores
 volverse locos tratando de entender por qué no funciona un código que
 a todas luces era perfecto; y no funcionaba porque la indentación
 estaba rota por culpa de &ldquo;fantasmas no visibles&rdquo; en el
-renglón. Recomendación: Sublime Text o Emacs &hellip; o en el otro orden
-mejor.</p>
+renglón. Recomendación: emacs o Sublime Text.</p>
 
 <h3 id="haskell-y-emacs">Haskell y Emacs</h3>
 
-<p>Los archivos de los proyectos de Haskell son ficheros .hs. Para que
-Emacs pueda manejar fácilmente dichos ficheros, instalaremos en
+<p>Los archivos de los proyectos de Haskell son ficheros <code>.hs</code>. Para que
+emacs pueda manejar fácilmente dichos ficheros, instalaremos en
 nuestro Ubuntu el paquete haskell-mode</p>
 
-<pre><code>sudo apt-get install haskell-mode
+<pre><code>sudo apt install haskell-mode
 </code></pre>
 
 <h3 id="haskell-y-sublime-text">Haskell y Sublime Text</h3>
@@ -259,8 +345,8 @@ nuestro Ubuntu el paquete haskell-mode</p>
 <p>Instalaremos Sublime Text mediante:</p>
 
 <pre><code>sudo add-apt-repository ppa:webupd8team/sublime-text-3 
-sudo apt-get update 
-sudo apt-get install sublime-text-installer
+sudo apt update 
+sudo apt install sublime-text-installer
 </code></pre>
 
 <p>Sublime Text está totalmente preparado para usar Haskell, salvo por un
@@ -546,15 +632,15 @@ caractéres &ldquo;&ndash;&rdquo; y para comentar un párrafo de código lo pone
 <p>De <a href="http://www.x.edu.uy/inet/IntHaskell98.pdf">D. José E. Labra G.</a>
 hemos tomado el contenido ligeramente modificado de los ficheros
 <a href="https://dl.dropboxusercontent.com/u/46506049/Pila.hs">Pila.hs</a> y
-<a href="https://dl.dropboxusercontent.com/u/46506049/Menu.hs">Menu.hs</a>. El
+<a href="https://dl.dropboxusercontent.com/u/46506049/Menu.hs">Main.hs</a>. El
 segundo es un ejemplo de menú que importa y opera con los objetos del
 primero.</p>
 
-<p>Si queremos hacer un ejecutable con Menu.hs podemos operar de dos
+<p>Si queremos hacer un ejecutable con Main.hs podemos operar de dos
 maneras. Suponemos que en la consola nos hemos colocado donde están
 los dos ficheros en cuestión. La primera forma sería:</p>
 
-<pre><code>ghc --make Menu.hs
+<pre><code>ghc --make Main.hs
 </code></pre>
 
 <p>y ahora podríamos ejecutar el ejecutable resultado con</p>
@@ -565,7 +651,7 @@ los dos ficheros en cuestión. La primera forma sería:</p>
 <p>La segunda forma sería ejecutar consecutivamente las siguientes dos
 órdenes en la consola:</p>
 
-<pre><code>ghc -c -O Pila.hs Menu.hs
+<pre><code>ghc -c -O Pila.hs Main.hs
 ghc -o menu -O Pila.o Menu.o
 </code></pre>
 
@@ -576,17 +662,17 @@ ghc -o menu -O Pila.o Menu.o
 
 <p>La ventaja de esta última forma de proceder es que con la orden:</p>
 
-<pre><code>ghc -c -O Pila.hs Menu.hs
+<pre><code>ghc -c -O Pila.hs Main.hs
 </code></pre>
 
-<p>creamos los ficheros <code>Pila.o</code> y <code>Menu.o</code> que nos valdrían para
+<p>creamos los ficheros <code>Pila.o</code> y <code>Main.o</code> que nos valdrían para
 pasarlos a otra parte del equipo que deba elaborar el fichero
-ejecutable <code>Menu</code>, pero que sin embargo no deba, o no pueda, conocer
-los ficheros <code>Menu.hs</code> y/o <code>Pila.hs</code>. Una vez hayan sido pasados los
-mencionados ficheros <code>Pila.o</code> y <code>Menu.o</code>, los receptores compondrían
+ejecutable <code>Main</code>, pero que sin embargo no deba, o no pueda, conocer
+los ficheros <code>Main.hs</code> y/o <code>Pila.hs</code>. Una vez hayan sido pasados los
+mencionados ficheros <code>Pila.o</code> y <code>Main.o</code>, los receptores compondrían
 el fichero ejecutable menu mediante la orden de consola:</p>
 
-<pre><code>ghc -o menu -O Pila.o Menu.o
+<pre><code>ghc -o menu -O Pila.o Main.o
 </code></pre>
 
 <h2 id="ejecutar-sin-compilar-y-sin-interpretar">Ejecutar sin compilar y sin interpretar</h2>
@@ -698,14 +784,32 @@ atentos a ejecutar <code>Ctrl + C</code> inmediatamente después de <code>desde 
 *Main&gt;
 </code></pre>
 
-<p>Nos costará, si no conocemos de antes a Haskell, sobreponernos a la impresión: hemos pedidoque sume los primeros 5 números de una ¡lista infinita! y ¡lo ha hecho en 0.00 segundos! ¿Dónde está el truco? Ni más ni menos en que Haskell evalúa perezosamente y al recibir la orden:</p>
+<p>Nos costará, si no conocemos de antes a Haskell, sobreponernos a la
+impresión: hemos pedidoque sume los primeros 5 números de una ¡lista
+infinita! y ¡lo ha hecho en 0.00 segundos! ¿Dónde está el truco? Ni
+más ni menos en que Haskell evalúa perezosamente y al recibir la
+orden:</p>
 
 <pre><code>*Main&gt; suma 5 (desde 1)
 </code></pre>
 
-<p>no ha confeccionado primero <code>desde 1</code>, tomado luego sus primeras 5 entrada y sumado finalmente para ofrecer el resultado <code>15</code>. En su lugar lo que hizo es calcular la primera entradade <code>desde 1</code>, separarla y mandar que le sea sumada la segunda entrada de <code>desde 1</code>, la cualpasa a calcular sabiendo que queda una selección menos que hacer, etc. El proceso continúa hasta que sabemos que no queda selección de entrada alguna que hacer ya en <code>desde 1</code> y entonces mandamos sumar <code>0</code> y damos la orden de parar de sumar, para seguidamente efectuar definitivamente la suma hilvanada durante todo este tiempo.</p>
+<p>no ha confeccionado primero <code>desde 1</code>, tomado luego sus primeras 5
+entrada y sumado finalmente para ofrecer el resultado <code>15</code>. En su
+lugar lo que hizo es calcular la primera entradade <code>desde 1</code>,
+separarla y mandar que le sea sumada la segunda entrada de <code>desde 1</code>,
+la cualpasa a calcular sabiendo que queda una selección menos que
+hacer, etc. El proceso continúa hasta que sabemos que no queda
+selección de entrada alguna que hacer ya en <code>desde 1</code> y entonces
+mandamos sumar <code>0</code> y damos la orden de parar de sumar, para
+seguidamente efectuar definitivamente la suma hilvanada durante todo
+este tiempo.</p>
 
-<p>La habilidad de Haskell: ¿para qué calcular <code>desde 1</code> y luego sumar sus 5 primeras entradas, si para nuestro propósito sólo son imprescindibles esas 5 entradas? ¡cuando sea necesario calcular/extraer más entradas de <code>desde 1</code>, ya lo haremos! ¡No nos precipitemos haciendo más trabajo del necesario! ¡Hagamos el sucintamente imprescindible no sea que nos cansemos &hellip; eh!</p>
+<p>La habilidad de Haskell: ¿para qué calcular <code>desde 1</code> y luego sumar
+sus 5 primeras entradas, si para nuestro propósito sólo son
+imprescindibles esas 5 entradas? ¡cuando sea necesario
+calcular/extraer más entradas de <code>desde 1</code>, ya lo haremos! ¡No nos
+precipitemos haciendo más trabajo del necesario! ¡Hagamos el
+sucintamente imprescindible no sea que nos cansemos &hellip; eh!</p>
 
 <p>Con el código anterior hay un pequeño problema, que realmente sólo es aparente:</p>
 
@@ -803,15 +907,16 @@ primosEq = map head  lprimos
 eficiente ni la criba real; es solamente un código de gran valor
 pedagógico.</p>
 
-<h2 id="enlaces-de-interés-para-saber-más-por-sí-mismo">Enlaces de interés para saber más por sí mismo</h2>
+<h2 id="enlaces-de-interés">Enlaces de Interés</h2>
 
-<p>Hemos dado la primera clase. Ahora:</p>
+<p>Son los siguientes:</p>
 
 <ul>
 <li>The Glorious Glasgow Haskell Compilation System <a href="https://downloads.haskell.org/~ghc/7.8.2/docs/html/users_guide/">User&rsquo;s Guide</a>, Version 7.8.2</li>
 <li>Una <a href="http://www.haskell.org/haskellwiki/Es/Introduccion">introducción a Haskell</a> telegráfica y en español.</li>
 <li>Podemos <a href="http://www.haskell.org/haskellwiki/Learn_Haskell_in_10_minutes">echar 10 minutos más</a> bien empleados y aprenderlo casi todo.</li>
-<li>Información técnica <a href="http://hackage.haskell.org/package/base-4.7.0.1/docs/">sobre los módulos</a>. Una página <a href="http://zvon.org/other/haskell/Outputglobal/index.html">similar</a>, más antigua pero de mucho interés.</li>
+<li>Información técnica <a href="http://hackage.haskell.org/package/base-4.7.0.1/docs/">sobre los módulos</a> o <a href="http://hackage.haskell.org/packages/">también</a>.</li>
+<li>Información técnica vía <a href="http://zvon.org/other/haskell/Outputglobal/index.html">zvon</a>, más antigua pero de mucho interés.</li>
 <li><a href="http://osl2.uca.es/wikihaskell/index.php/P%C3%A1gina_principal">Wikihaskell</a> de la UCA.</li>
 <li>Una guía de usuario para <a href="http://www.haskell.org/cabal/users-guide/">Cabal</a> y la guía de Cabal de <a href="http://osl2.uca.es/wikihaskell/index.php/Biblioteca_de_empaquetamiento_Cabal">Wikihaskell</a>.</li>
 <li><a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good</a> de Miran Lipovaca.</li>
@@ -867,6 +972,35 @@ pedagógico.</p>
     });
 </script>
 <script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
 
 
 </body>
