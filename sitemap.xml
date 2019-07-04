@@ -3,8 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wildunix.es/</loc>
+    <lastmod>2019-07-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/posts/dosbox/</loc>
+    <lastmod>2019-07-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/posts/</loc>
+    <lastmod>2019-07-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/</loc>
+    <lastmod>2019-07-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/dosbox/</loc>
+    <lastmod>2019-07-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wildunix.es/posts/emacs/</loc>
     <lastmod>2018-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/emacs/</loc>
+    <lastmod>2018-03-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/latex/</loc>
+    <lastmod>2018-03-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -18,8 +59,50 @@
   </url>
   
   <url>
+    <loc>https://wildunix.es/tags/evince/</loc>
+    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/qr/</loc>
+    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wildunix.es/posts/convert_to_utf8/</loc>
     <lastmod>2018-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/jupyter/</loc>
+    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/linux/</loc>
+    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/mac/</loc>
+    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/python/</loc>
+    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/sage/</loc>
+    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -33,6 +116,30 @@
   </url>
   
   <url>
+    <loc>https://wildunix.es/tags/almacenar/</loc>
+    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/contrase%C3%B1as/</loc>
+    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/seguridad/</loc>
+    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/seguro/</loc>
+    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wildunix.es/posts/el-modelo-m4-de-la-maquina-enigma/</loc>
     <lastmod>2017-08-11T00:00:00+00:00</lastmod>
   </url>
@@ -43,8 +150,44 @@
   </url>
   
   <url>
+    <loc>https://wildunix.es/tags/enigma/</loc>
+    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/haskell/</loc>
+    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/m%C3%A1quina/</loc>
+    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wildunix.es/posts/el-patron-nk-en-haskell-a-partir-de-la-version-703/</loc>
     <lastmod>2016-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/clase/</loc>
+    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/math/</loc>
+    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/programming/</loc>
+    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -63,8 +206,38 @@
   </url>
   
   <url>
+    <loc>https://wildunix.es/tags/prolog/</loc>
+    <lastmod>2016-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wildunix.es/posts/guia-para-usar-cron/</loc>
     <lastmod>2016-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/cron/</loc>
+    <lastmod>2016-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/herramientas/</loc>
+    <lastmod>2016-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/programar/</loc>
+    <lastmod>2016-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/tools/</loc>
+    <lastmod>2016-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -73,8 +246,56 @@
   </url>
   
   <url>
+    <loc>https://wildunix.es/tags/arab/</loc>
+    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/arabtex/</loc>
+    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/arabe/</loc>
+    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/postgres/</loc>
+    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wildunix.es/posts/configurar-django-con-nginx-gunicorn-virtualenv-supervisor-y-postgresql/</loc>
     <lastmod>2016-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/django/</loc>
+    <lastmod>2016-07-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/gunicorn/</loc>
+    <lastmod>2016-07-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/nginx/</loc>
+    <lastmod>2016-07-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/tags/ipython/</loc>
+    <lastmod>2016-03-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -98,216 +319,8 @@
   </url>
   
   <url>
-    <loc>https://wildunix.es/posts/instalar-elpa-para-emacs-23/</loc>
-    <lastmod>2016-03-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/</loc>
-    <lastmod>2018-03-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/almacenar/</loc>
-    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/arab/</loc>
-    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/arabe/</loc>
-    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/arabtex/</loc>
-    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://wildunix.es/tags/certificado/</loc>
     <lastmod>2016-03-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/clase/</loc>
-    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/contrase%C3%B1as/</loc>
-    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/cron/</loc>
-    <lastmod>2016-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/django/</loc>
-    <lastmod>2016-07-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/emacs/</loc>
-    <lastmod>2018-03-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/enigma/</loc>
-    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/evince/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/gunicorn/</loc>
-    <lastmod>2016-07-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/haskell/</loc>
-    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/herramientas/</loc>
-    <lastmod>2016-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/ipython/</loc>
-    <lastmod>2016-03-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/jupyter/</loc>
-    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/latex/</loc>
-    <lastmod>2018-03-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/linux/</loc>
-    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/mac/</loc>
-    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/math/</loc>
-    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/m%C3%A1quina/</loc>
-    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/nginx/</loc>
-    <lastmod>2016-07-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/postgres/</loc>
-    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/posts/</loc>
-    <lastmod>2018-03-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/programar/</loc>
-    <lastmod>2016-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/programming/</loc>
-    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/prolog/</loc>
-    <lastmod>2016-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/python/</loc>
-    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/qr/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/sage/</loc>
-    <lastmod>2018-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/seguridad/</loc>
-    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/seguro/</loc>
-    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -318,20 +331,18 @@
   </url>
   
   <url>
-    <loc>https://wildunix.es/tags/</loc>
-    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wildunix.es/tags/tools/</loc>
-    <lastmod>2016-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://wildunix.es/tags/virtualenv/</loc>
     <lastmod>2016-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/posts/instalar-elpa-para-emacs-23/</loc>
+    <lastmod>2016-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wildunix.es/categories/</loc>
     <priority>0</priority>
   </url>
   

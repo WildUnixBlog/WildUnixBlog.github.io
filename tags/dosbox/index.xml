@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dosbox on </title>
+    <link>https://wildunix.es/tags/dosbox/</link>
+    <description>Recent content in dosbox on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 04 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wildunix.es/tags/dosbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Instalación y uso de DOSBox</title>
+      <link>https://wildunix.es/posts/dosbox/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wildunix.es/posts/dosbox/</guid>
+      <description>Introducción DOSBox es un emulador de MS-DOS.
+MS-DOS (siglas de MicroSoft Disk Operating System, Sistema operativo de disco de Microsoft) es un sistema operativo para computadores basados en x86. Fue el miembro mas popular de la familia de sistemas operativos DOS de Microsoft, y el principal sistema para computadoras personales compatible con IBM PC en la década de1980 y mediados de 1990, hasta que fue sustituida gradualmente por sistemas operativos que ofrecían una interfaz gráfica de usuario, en particular por varias generaciones de Microsoft Windows.</description>
+    </item>
+    
+  </channel>
+</rss>

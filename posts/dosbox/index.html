@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Instalación y uso de DOSBox &middot; </title>
+    
+    <meta name="description" content="Blog cooperativo de Yábir Benchakhtir y M. García dedicado a ayudar a usuarios de Unix y programadores de Python y Haskell">
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- RSS autodiscovery -->
+    
+
+    <link rel="shortcut icon" href="https://wildunix.es/img/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://wildunix.es/css/screen.css">
+    <link rel="stylesheet" href="https://wildunix.es/css/github.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://wildunix.es/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://wildunix.es/favicon.ico">
+    
+
+    <!-- Stylesheet for theme color -->
+    <style type="text/css">
+    a, a:visited {color: #3498db;}
+    .pagination a {color: #3498db;}
+    .gist .gist-file .gist-meta a:visited {color: #3498db !important;}
+    a:focus, a:hover, a.excerptlink:hover {color: #2079b4;}
+    a.excerptlink:visited {color:inherit;}
+    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #2079b4;}
+    .older-posts:hover, .newer-posts:hover {color: #2079b4;}
+</style>
+
+</head>
+
+<body class="home-template">
+    <header id="site-head">
+	
+	<h1 class="blog-title"><a href="https://wildunix.es">WildUnix</a></h1>
+	
+	
+</header>
+    
+    
+    <main class="content" role="main">
+    
+<article class="post">
+    <header>
+        <h1 class="post-title">Instalación y uso de DOSBox</h1>
+        <div class="post-meta">
+            <time datetime="04 July 2019">
+                04 July 2019
+            </time>
+        </div>
+    </header>
+
+    <section class="post-content">
+        
+
+<h2 id="introducción">Introducción</h2>
+
+<p>DOSBox es un emulador de MS-DOS.</p>
+
+<p>MS-DOS (siglas de MicroSoft Disk Operating System, Sistema operativo de disco de Microsoft) es un sistema operativo para computadores basados en x86. Fue el miembro mas popular de la familia de sistemas operativos DOS de Microsoft, y el principal sistema para computadoras personales compatible con IBM PC en la década de1980 y mediados de 1990, hasta que fue sustituida gradualmente por sistemas operativos que ofrecían una interfaz gráfica de usuario, en particular por varias generaciones de Microsoft Windows.</p>
+
+<p>La solución es usar un emulador de MS-DOS y en la actualidad hay dos famosos: dosemu y DOSBox. El primero es excelente pero sólo está actualmente para Linux; el segundo es también muy bueno y sí está para todas las plataformas. ¿Cuál elegir? pues los DOS ya que nuestro sistema de cabecera es Ubuntu.</p>
+
+<p>Este post está dedicado a DOSBox y luego ofreceremos otro para dosemu. En cualquiera de los casos, aquí explicaremos el uso elemental y dejaremos que el usuario se informe en la red del avanzado.</p>
+
+<h2 id="descarga">Descarga</h2>
+
+<p>La descarga para Mac OS X y Windows puede ser a través de la <a href="http://www.dosbox.com/download.php?main=1">página oficial</a> o de <a href="http://sourceforge.net/projects/dosbox/files/dosbox/">ésta otra</a>. En el caso de Ubuntu, la instalación se hace con <code>apt</code> como diremos más adelante.</p>
+
+<h2 id="instalación-y-adecuación">Instalación y adecuación</h2>
+
+<h3 id="en-ubuntu">En Ubuntu</h3>
+
+<p>Abrimos nuestro terminal (<code>Ctrl+Alt+t</code>) y ejecutamos en ella la orden:</p>
+
+<pre><code>sudo apt install dosbox
+</code></pre>
+
+<p>y cuando acabe el proceso de instalación ejecutamos DOSBox. Veremos que se abre la pantalla negra típica de esta utilidad, seguidamente la cerramos. En nuestro navegador interno en la estructura de archivos pulsamos <code>Ctrl+h</code>, con lo cual hacemos visibles los ficheros ocultos. En el directorio raíz del usuario que ejecutó DOSBox habrá uno de esos directorios ocultos llamado .dosbox. Si entramos en él veremos un fichero llamado algo así como <code>dosbox-0.74.conf</code> (el &ldquo;0.74&rdquo; es por la versión instalada, otros podrían tener otro número, aunque lo que importa es el <code>.conf</code>.</p>
+
+<p>Usaremos nuestro editor preferido para abrir el fichero <code>dosbox-0.74.conf</code> y lo modificaremos de acuerdo con lo siguiente. En el apartado <code>[dos]</code> cambiaremos la línea</p>
+
+<pre><code>keyboardlayout=auto
+</code></pre>
+
+<p>por la línea</p>
+
+<pre><code>keyboardlayout=sp
+</code></pre>
+
+<p>con ello tendremos en español el teclado que entiende DOSBox. En el apartado <code>[autoexec]</code> incluiremos bajo las líneas de comentario (comienzan por #) la siguiente:</p>
+
+<pre><code>mount c /home/mi_usuario/Documentos
+</code></pre>
+
+<p>Esto hace que cuando arranquemos DOSBox, comprenda que hay una unidad <code>C:</code> que corresponde con el directorio <code>/home/mi_usuario/Documentos</code>. Por supuesto que en lugar de <code>c</code> se podría haber elegido otra letra, igual que se podría haber elegido otro destino diferente a <code>Documentos</code>. Todo según nuestro interés.</p>
+
+<p>Cuando arranquemos de nuevos DOSBox, podemos ejecutar la orden</p>
+
+<pre><code>c:
+</code></pre>
+
+<p>en la línea de órdenes del programa, es decir tras el mensaje <code>Z:\&gt;</code>, con lo que entraremos desde DOSBox en el directorio de trabajo deseado, en nuestro caso <code>/home/mi_usuario/Documentos</code>.</p>
+
+<h3 id="en-mac-os-x">En Mac OS X</h3>
+
+<p>Una vez bajado e instalado el paquete correspondiente, ejecutamos la aplicación DOSBox. Aparece la pantalla negra típica y dentro el prompt <code>Z:\&gt;</code>.</p>
+
+<p>A diferencia del caso de Ubuntu, no está creado el fichero <code>dosbox.conf</code>, por lo que tendremos que crearlo. Esto se hace ejecutando la orden:</p>
+
+<pre><code>config -writeconf dosbox.conf
+</code></pre>
+
+<p>desde la línea de órdenes de DOSBox (en la línea que empieza por <code>Z:\&gt;</code>). Pero, ¡cuidado! ahora tenemos el teclado inglés, por lo que el signo &ldquo;-&rdquo; hay que sacarlo pulsando sin mayúsculas en la tecla <code>?</code> es decir, pulsando en <code>'</code>. Esta operación crea el fichero <code>dosbox.conf</code> en Aplicaciones. Ahora debemos modificar el fichero <code>dosbox.conf</code> procediendo igual que en el caso de Ubuntu con el fichero <code>dosbox-0.74.conf</code>. La única diferencia es que en lugar de <code>mount c /home/mi_usuario/Documentos</code> escribiremos:</p>
+
+<pre><code>mount c /Users/mi_usuario/Documents
+</code></pre>
+
+<p>Como decíamos antes, para entrar desde DOSBox en el directorio de trabajo, ejecutaríamos ahora desde la línea de órdenes <code>Z:\&gt;</code> la orden:</p>
+
+<pre><code>c:
+</code></pre>
+
+<h2 id="en-windows-7">En Windows 7</h2>
+
+<p>Una vez bajado e instalado, hemos de saber que DOSBox está por defecto en el lenguaje ambiente del ordenador, español en nuestro caso.</p>
+
+<p>Si queremos generar el fichero <code>dosbox.conf</code>, arrancaremos DOSBox y ejecutaremos en la línea del prompt <code>Z:\&gt;</code> la orden</p>
+
+<pre><code>config -writeconf dosbox.conf
+</code></pre>
+
+<p>Con ello se creará el fichero dosbox.conf en el directorio:</p>
+
+<pre><code>Archivos de programa (x86)\DOSBox-0.74
+</code></pre>
+
+<p>si es que es allí donde hemos elegido instalar DOSBox (recomendamos ese lugar que es el que ofrece Windows 7 por defecto). Ahora podríamos modificar <code>dosbox.conf</code> con la añadidura del directorio <code>C:</code>, pues hemos dicho que no es necesario cambiar el idioma. La modificación sería añadir:</p>
+
+<pre><code>mount c C:\Users\mi_usuario\carpeta_preferida
+</code></pre>
+
+<p>como última línea del fichero, en la sección <code>[autoexec]</code>. Ahora iremos a la carpeta de instalación de DOSBox (en nuestro caso es <code>c:\Archivos de programa (x86)\DOSBox-0.74</code>), situaremos el puntero sobre el archivo <code>DOSBox.exe</code>, pulsaremos el botón de la derecha y haremos clic en &ldquo;Crear acceso directo&rdquo;. Aparecerá entonces el fichero &ldquo;DOSBox.exe - Acceso directo&rdquo;; situaremos el puntero sobre él, haremos clic con el botón de la derecha y pulsaremos sobre &ldquo;Propiedades&rdquo;. Se abre entonces una ventana; en la casilla &ldquo;Destino&rdquo; de la misma añadiremos lo siguiente al final de lo que haya escrito:</p>
+
+<pre><code>-userconf -conf dosbox.conf
+</code></pre>
+
+<p>con lo que quedará en dicha casilla &ldquo;Destino&rdquo; el texto:</p>
+
+<pre><code>&quot;C:\Program Files (x86)\DOSBox-0.74\DOSBox.exe&quot; -userconf -conf dosbox.conf
+</code></pre>
+
+<p>Ahora el acceso directo modificado lo arrastraremos al escritorio o lo anclaremos en la barra de tareas o bien lo anclaremos en el menú de inicio; otra idea interesante es llevarlo a una carpeta donde coleccionaremos accesos directos a DOSBox, pero cada uno sobre un <code>dosbox.conf</code> creado con distinto nombre y contenido según el juego con el que deseemos jugar o la utilidad que queramos arrancar al pulsar ese acceso directo.</p>
+
+<p>Si preferimos no tener estos accesos directos y sencillamente montar en cada momento el directorio que nos interese como unidad C:, entonces ejecutaremos cada vez que arranquemos DOSBox las órdenes:</p>
+
+<pre><code>Z:\&gt; mount c C:\Users\mi_usuario\carpeta_preferida
+Z:\&gt; c:
+</code></pre>
+
+<p>y así entrar en el directorio de trabajo que hemos abreviado por c.</p>
+
+<h2 id="truco">Truco</h2>
+
+<p>Para cualquier plataforma, en la sección <code>[autoexec]</code> de <code>config.conf</code>, podríamos escribir en lugar de lo equivalente a <code>mount c /home/mi_usuario/Documentos</code>, lo equivalente a las siguientes tres líneas:</p>
+
+<pre><code>mount c /home/mi_usuario/Documentos
+c:\
+dir
+</code></pre>
+
+<h2 id="nota-final">Nota final</h2>
+
+<p>Han sido probadas otras utilidades que fracasan en DOSBox y en algunas plataformas cuando es requerido cierto nivel de prestaciones gráficas, al contrario que en dosemu en el que no fracasan y se ejecutan más rápidamente. Por ello, en un próximo post hablaremos de <code>dosemu</code> como alternativa.</p>
+
+<p>Y &hellip; esto es todo por hoy.</p>
+
+    </section>
+
+    
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+	<div class="inner">
+		<section class="footer-social">
+      
+      <a href="//twitter.com/wildunix" target="_blank" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a>&nbsp;
+      
+      
+      
+      
+      
+      
+      <a href="//github.com/wildUnixBlog" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
+      
+      
+      
+      
+  </section>
+
+		<section class="copyright">&copy; 2019 <a href="https://wildunix.es"></a>. Licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></section>
+	</div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://wildunix.es/js/index.js"></script>
+<script src="https://wildunix.es/js/smooth-scroll.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+</body>
+</html>
