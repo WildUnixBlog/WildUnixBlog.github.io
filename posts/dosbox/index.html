@@ -70,7 +70,9 @@
 
 <p>DOSBox es un emulador de MS-DOS.</p>
 
-<p>MS-DOS (siglas de MicroSoft Disk Operating System, Sistema operativo de disco de Microsoft) es un sistema operativo para computadores basados en x86. Fue el miembro mas popular de la familia de sistemas operativos DOS de Microsoft, y el principal sistema para computadoras personales compatible con IBM PC en la década de1980 y mediados de 1990, hasta que fue sustituida gradualmente por sistemas operativos que ofrecían una interfaz gráfica de usuario, en particular por varias generaciones de Microsoft Windows.</p>
+<p>MS-DOS (siglas de MicroSoft Disk Operating System, Sistema operativo de disco de Microsoft) es un sistema operativo para computadores basados en x86. Fue el miembro mas popular de la familia de sistemas operativos DOS de Microsoft, y el principal sistema para computadoras personales compatible con IBM PC en la década de 1980 y mediados de 1990, hasta que fue sustituida gradualmente por sistemas operativos que ofrecían una interfaz gráfica de usuario, en particular por varias generaciones de Microsoft Windows.</p>
+
+<p>MS-DOS fue usado por muchas personas que en la actualidad guardan un recuerdo nostálgico de aquel sistema que tanto les ofreció. Existen muchos juegos con los que querrían volver a jugar; también existen programas que serían difíciles de rehacer y que se necesitaría rescatar; pero MS-DOS terminó por morir. En el cambio de MS-DOS a Windows se perdió la compatibilidad una gran mayoría de los programas de MS-DOS, que no funcionan ya en nuestros Windows 2000, XP, Vista ó 7 a pesar de que Windows trae una especie de Símbolo de sistema y que no es un MS-DOS auténtico.</p>
 
 <p>La solución es usar un emulador de MS-DOS y en la actualidad hay dos famosos: dosemu y DOSBox. El primero es excelente pero sólo está actualmente para Linux; el segundo es también muy bueno y sí está para todas las plataformas. ¿Cuál elegir? pues los DOS ya que nuestro sistema de cabecera es Ubuntu.</p>
 
@@ -89,7 +91,7 @@
 <pre><code>sudo apt install dosbox
 </code></pre>
 
-<p>y cuando acabe el proceso de instalación ejecutamos DOSBox. Veremos que se abre la pantalla negra típica de esta utilidad, seguidamente la cerramos. En nuestro navegador interno en la estructura de archivos pulsamos <code>Ctrl+h</code>, con lo cual hacemos visibles los ficheros ocultos. En el directorio raíz del usuario que ejecutó DOSBox habrá uno de esos directorios ocultos llamado .dosbox. Si entramos en él veremos un fichero llamado algo así como <code>dosbox-0.74.conf</code> (el &ldquo;0.74&rdquo; es por la versión instalada, otros podrían tener otro número, aunque lo que importa es el <code>.conf</code>.</p>
+<p>y cuando acabe el proceso de instalación ejecutamos DOSBox. Veremos que se abre la pantalla negra típica de esta utilidad, seguidamente la cerramos. En nuestro navegador interno en la estructura de archivos pulsamos <code>Ctrl+h</code>, con lo cual hacemos visibles los ficheros ocultos. En el directorio raíz del usuario que ejecutó DOSBox habrá uno de esos directorios ocultos llamado .dosbox. Si entramos en él veremos un fichero llamado algo así como <code>dosbox-0.74.conf</code> (el &ldquo;0.74&rdquo; es por la versión instalada y lo usaremos aquí para fijar ideas, el usuario podría tener otro número, lo que importa realmente es el <code>.conf</code>).</p>
 
 <p>Usaremos nuestro editor preferido para abrir el fichero <code>dosbox-0.74.conf</code> y lo modificaremos de acuerdo con lo siguiente. En el apartado <code>[dos]</code> cambiaremos la línea</p>
 
@@ -108,7 +110,7 @@
 
 <p>Esto hace que cuando arranquemos DOSBox, comprenda que hay una unidad <code>C:</code> que corresponde con el directorio <code>/home/mi_usuario/Documentos</code>. Por supuesto que en lugar de <code>c</code> se podría haber elegido otra letra, igual que se podría haber elegido otro destino diferente a <code>Documentos</code>. Todo según nuestro interés.</p>
 
-<p>Cuando arranquemos de nuevos DOSBox, podemos ejecutar la orden</p>
+<p>Cuando arranquemos de nuevos DOSBox, podemos ejecutar la orden:</p>
 
 <pre><code>c:
 </code></pre>
@@ -163,17 +165,19 @@
 <pre><code>&quot;C:\Program Files (x86)\DOSBox-0.74\DOSBox.exe&quot; -userconf -conf dosbox.conf
 </code></pre>
 
+<p>En realidad, lo que estamos haciendo con esto es mandar ejecutar el programa <code>DOSBox.exe</code>, obligándo a que se configure de acuerdo con las instrucciones que dicta del fichero <code>dosbox.conf</code>, fichero que no carga por defecto tal y como hacía DOSBox en las otras dos plataformas: Linux y Mac OS X.</p>
+
 <p>Ahora el acceso directo modificado lo arrastraremos al escritorio o lo anclaremos en la barra de tareas o bien lo anclaremos en el menú de inicio; otra idea interesante es llevarlo a una carpeta donde coleccionaremos accesos directos a DOSBox, pero cada uno sobre un <code>dosbox.conf</code> creado con distinto nombre y contenido según el juego con el que deseemos jugar o la utilidad que queramos arrancar al pulsar ese acceso directo.</p>
 
-<p>Si preferimos no tener estos accesos directos y sencillamente montar en cada momento el directorio que nos interese como unidad C:, entonces ejecutaremos cada vez que arranquemos DOSBox las órdenes:</p>
+<p>Si preferimos no tener estos accesos directos y sencillamente montar en cada momento el directorio que nos interese como unidad <code>C:</code>, entonces ejecutaremos cada vez que arranquemos DOSBox las órdenes:</p>
 
 <pre><code>Z:\&gt; mount c C:\Users\mi_usuario\carpeta_preferida
 Z:\&gt; c:
 </code></pre>
 
-<p>y así entrar en el directorio de trabajo que hemos abreviado por c.</p>
+<p>y así entrar en el directorio de trabajo que hemos abreviado por <code>c</code>.</p>
 
-<h2 id="truco">Truco</h2>
+<h2 id="ir-un-poco-más-allá">Ir un poco más allá</h2>
 
 <p>Para cualquier plataforma, en la sección <code>[autoexec]</code> de <code>config.conf</code>, podríamos escribir en lugar de lo equivalente a <code>mount c /home/mi_usuario/Documentos</code>, lo equivalente a las siguientes tres líneas:</p>
 
