@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>virtualenv on </title>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Guía rápida para usar virtualenv</title>
-      <link>https://wildunix.es/posts/guia-rapida-para-usar-virtualenv/</link>
+      <link>https://wildunix.es/guia-rapida-para-usar-virtualenv/</link>
       <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/guia-rapida-para-usar-virtualenv/</guid>
+      <guid>https://wildunix.es/guia-rapida-para-usar-virtualenv/</guid>
       <description>¿Qué es Virtualenv? Como dice en su propia documentacion documentación es una herramienta para crear entornos aislados para python ¿Y qué tiene esto de bueno? Pues que un un mismo odenador podemos tener distintas versiones de librerias o incluso ¡distintas versiones del propio python! Esto es realmente útil cuando queremos hacer por ejemplo pruebas de un código en distintas versiones o replicar una instalación de otro ordenador. Además nos permite evitar instalar librerías a nivel global por lo que evitamos posibles problemas o incluso podemos comparar entre versiones.</description>
     </item>
     

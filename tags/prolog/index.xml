@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>prolog on </title>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Mi primera clase de Prolog</title>
-      <link>https://wildunix.es/posts/mi-primera-clase-de-prolog/</link>
+      <link>https://wildunix.es/mi-primera-clase-de-prolog/</link>
       <pubDate>Sat, 24 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/mi-primera-clase-de-prolog/</guid>
+      <guid>https://wildunix.es/mi-primera-clase-de-prolog/</guid>
       <description>Introducción El término &amp;ldquo;Prolog&amp;rdquo; (o &amp;ldquo;PROLOG&amp;rdquo;), proviene de la expresión en francés &amp;ldquo;PROgrammation en LOGique&amp;rdquo;, es un lenguaje de programación lógico e interpretado, bastante conocido en el medio de investigación en Inteligencia Artificial.
 Prolog es un lenguaje de programación para ordenadores que se basa en el lenguaje de la Lógica de Primer Orden y que se utiliza para resolver problemas en los que entran en juego objetos y relaciones entre ellos.</description>
     </item>

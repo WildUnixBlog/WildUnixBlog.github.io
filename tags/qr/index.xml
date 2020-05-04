@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>qr on </title>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Crear un QRC con LaTeX e incluirlo en un fichero LaTeX</title>
-      <link>https://wildunix.es/posts/qrc_latex/</link>
+      <link>https://wildunix.es/qrc_latex/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/qrc_latex/</guid>
+      <guid>https://wildunix.es/qrc_latex/</guid>
       <description>Introducción Los usuarios de LaTeX se muestran reacios a usar otras herramientas si pueden servirse de su preciado compilador para editar y que se comporta como una verdadera imprenta. En este post venimos a ayudarlos y a darles una razón más para seguir con &amp;ldquo;LaTeX para todo&amp;rdquo;.
 No hay que glosar la gran utilidad que tiene hoy codificar las direcciones de internet en códigos QR de forma que se pueda acceder a ellas desde dispositivos móviles.</description>
     </item>

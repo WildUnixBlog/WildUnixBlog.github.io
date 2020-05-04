@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gunicorn on </title>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Configurar Django con Nginx, Gunicorn, virtualenv, supervisor y PostgreSQL</title>
-      <link>https://wildunix.es/posts/configurar-django-con-nginx-gunicorn-virtualenv-supervisor-y-postgresql/</link>
+      <link>https://wildunix.es/configurar-django-con-nginx-gunicorn-virtualenv-supervisor-y-postgresql/</link>
       <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/configurar-django-con-nginx-gunicorn-virtualenv-supervisor-y-postgresql/</guid>
+      <guid>https://wildunix.es/configurar-django-con-nginx-gunicorn-virtualenv-supervisor-y-postgresql/</guid>
       <description>Esta es una traducción del post que puede encontrar en el enlace:
 http://michal.karzynski.pl/blog/2013/06/09/django-nginx-gunicorn-virtualenv-supervisor/
 contando con el permiso autor para compartirlo en español.

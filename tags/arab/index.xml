@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>arab on </title>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Adecuar Arabtex al convenio de transcripción de la Escuela de Arabistas de Granada</title>
-      <link>https://wildunix.es/posts/adecuar-arabtex-al-convenio-de-transcripcion-de-la-escuela-de-arabistas-de-granada/</link>
+      <link>https://wildunix.es/adecuar-arabtex-al-convenio-de-transcripcion-de-la-escuela-de-arabistas-de-granada/</link>
       <pubDate>Sun, 28 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/adecuar-arabtex-al-convenio-de-transcripcion-de-la-escuela-de-arabistas-de-granada/</guid>
+      <guid>https://wildunix.es/adecuar-arabtex-al-convenio-de-transcripcion-de-la-escuela-de-arabistas-de-granada/</guid>
       <description>Introducción Por alguna razón que se nos escapa ahora mismo, los estudiantes de letras no usan LaTeX, cuando las dificultades de LaTeX están en la edición científica. La edición científica tiene la dificultad y la potencia; la edición humanística, en cambio, no tiene la dificultad y sí la potencia.
 Nuestro deseo es difundir el software libre también entre los humanistas y los artistas, así que hoy traemos aquí un modo de escribir árabe con LaTeX, a través de Arabtex.</description>
     </item>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>evince on </title>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Adecuar emacs para usar Pdflatex y Evince por defecto</title>
-      <link>https://wildunix.es/posts/emacs_evince/</link>
+      <link>https://wildunix.es/emacs_evince/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/emacs_evince/</guid>
+      <guid>https://wildunix.es/emacs_evince/</guid>
       <description>Introducción Por alguna razón que desconocemos, nuestro dúo preferido para editar ficheros LaTeX &amp;mdash;emacs y auxtex&amp;mdash; no viene preconfigurado en Ubuntu para usar por defecto el formato pdflatex y el visor Evince. Por una parte creemos desfasado compilar con LaTeX para crear un .dvi y por otra, la mayoría de visores no actualizan automáticamente un .pdf si éste ha sido modificado; no es el caso de Evince. Por tanto, queremos que al compilar los .</description>
     </item>
     

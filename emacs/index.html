@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Un Resumen de Atajos Fundamentales de emacs &middot; </title>
+    
+    <meta name="description" content="Blog cooperativo de Yábir Benchakhtir y M. García dedicado a ayudar a usuarios de Unix y programadores de Python y Haskell">
+    <meta name="generator" content="Hugo 0.69.2" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- RSS autodiscovery -->
+    
+
+    <link rel="shortcut icon" href="https://wildunix.es/img/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://wildunix.es/css/screen.css">
+    <link rel="stylesheet" href="https://wildunix.es/css/github.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://wildunix.es/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://wildunix.es/favicon.ico">
+    
+
+    <!-- Stylesheet for theme color -->
+    <style type="text/css">
+    a, a:visited {color: #3498db;}
+    .pagination a {color: #3498db;}
+    .gist .gist-file .gist-meta a:visited {color: #3498db !important;}
+    a:focus, a:hover, a.excerptlink:hover {color: #2079b4;}
+    a.excerptlink:visited {color:inherit;}
+    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #2079b4;}
+    .older-posts:hover, .newer-posts:hover {color: #2079b4;}
+</style>
+
+</head>
+
+<body class="home-template">
+    <header id="site-head">
+	
+	<h1 class="blog-title"><a href="https://wildunix.es">WildUnix</a></h1>
+	
+	
+</header>
+    
+    
+    <main class="content" role="main">
+    
+<article class="post">
+    <header>
+        <h1 class="post-title">Un Resumen de Atajos Fundamentales de emacs</h1>
+        <div class="post-meta">
+            <time datetime="09 March 2018">
+                09 March 2018
+            </time>
+        </div>
+    </header>
+
+    <section class="post-content">
+        <h2 id="introducción">Introducción</h2>
+<p>Cada usuario de <code>emacs</code> tiene sus atajos predilectos. A continución
+enumeramos los nuestros, los que atesoramos, los que más hemos usado
+con el paso del tiempo.</p>
+<p>La productividad está en proporción directa con el número de atajos
+usados; eres tanto más productivo cuanto menos llevas las manos
+al ratón. Es así como hemos comprendido que <code>emacs</code> es el
+mejor aliado en el escritorio, puede que también el único.</p>
+<h2 id="el-manual-en-español">El Manual en Español</h2>
+<p><a href="http://www.nongnu.org/emacs-man-es/">Manual de emacs en español</a></p>
+<p>Otros enlaces de interés:</p>
+<ol>
+<li><a href="http://www.lapipaplena.org/emacs-cuatro-cositas-para-no-perecer-en-el-intento/">lapipaplena</a></li>
+<li><a href="http://crysol.org/es/node/279">crysol</a></li>
+<li><a href="http://antonio-mario.com/un-poco-de-emacs-iii-comandos-basicos-2/">antonio mario</a></li>
+<li><a href="http://www.fcaglp.unlp.edu.ar/~observacional/manuales/emacs_man.pdf">Héctor Mora</a></li>
+<li><a href="ftp://ftp.dante.de/tex-archive/info/spanish/guia-atx/guia-atx.pdf">Manual completo de AUC TeX</a></li>
+<li><a href="https://www.emacswiki.org/emacs/RegularExpression">Regular Expression in Emacs Wiki</a></li>
+</ol>
+<h2 id="significado-de-algunas-teclas-en-la-terminología-de-emacs">Significado de algunas teclas en la terminología de emacs</h2>
+<pre><code>Alt = M (meta)
+Crtl = C (control)
+SPC (barra espaciadora)
+RET (intro)
+RETRO (retroceso)
+TAB (tabuladora)
+</code></pre>
+<h2 id="teclas-de-socorro">Teclas de Socorro</h2>
+<pre><code>C-g   (cancela algo: una orden, una combinación de teclas, etc.)
+C-x u (deshace lo último)
+</code></pre>
+<h2 id="abrir-un-fichero">Abrir un Fichero</h2>
+<pre><code>C-x C-f (abrir un archivo)
+</code></pre>
+<h2 id="salir">Salir</h2>
+<pre><code>C-x C-c (Salir de Emacs)
+C-x C-s (Guardar sin salir)
+C-x C-w (Guardar como)
+C-x s   (Guardar todos los ficheros abiertos. Preguntará.)
+</code></pre>
+<h2 id="teclas-para-el-movimiento">Teclas para el Movimiento</h2>
+<pre><code>C-a     (ir al comienzo de una línea)
+C-e     (ir al final de una línea)
+C-f     (un caracter hacia adelante)
+C-b     (un caracter hacia atrás)
+M-f     (una palabra hacia adelante)
+M-b     (una palabra hacia atrás)
+C-n     (ir a la siguiente línea)
+C-p     (ir a la línea anterior)
+C-o     (Inserta linea en blanco a continuación del cursor)
+M-g g   (ir a una línea)
+M-a     (ir al inicio del párrafo)
+M-e     (ir al final del párrafo)
+C-v     (ir a la página siguiente)
+M-8 C-v (sube la línea de cursor hacia el borde superior de la pantalla 8 líneas)
+M-v     (ir a la página anterior)
+M-8 M-v (baja la línea de cursor hacia el borde inferior de la pantalla 8 líneas)
+M-&lt;     (ir al principio del texto en el buffer)
+M-&gt;     (ir al final del texto en el buffer)
+C-l     (redibuja la pantalla. La primera vez que se pulsa, coloca la línea del cursor en el centro, la segunda arriba y la tercera abajo)
+</code></pre>
+<h2 id="copiar-cortar-y-pegar">Copiar, cortar y pegar</h2>
+<pre><code>C-SPC (inicio del marcado de texto)
+C-h   (marcar todo el buffer, “Seleccionar todo”)
+M-w   (copiar)
+C-w   (cortar)
+C-y   (pegar)
+</code></pre>
+<h2 id="buscar-alguna-palabra">Buscar alguna palabra</h2>
+<pre><code>C-s     (busca hacia adelante)
+C-r     (busca hacia atras)
+C-s C-s (repite la busqueda)
+</code></pre>
+<h2 id="borrar">Borrar</h2>
+<pre><code>M-d     (palabra despues del cursor)
+M-3 M-d (borra 3 palabras)
+C-k     (del cursor a fin de linea)
+M-3 C-k (borra 3 lineas)
+M-k     (todo el párrafo)
+M-3 M-k (borra 3 párrafos)
+C-x C-o	(elimina todas las lineas en blanco menos una)
+Esc-SPC	(elimina todos los blancos menos uno)
+M-\	    (elimina todos los blancos)
+</code></pre>
+<p>Nota.- Como puede verse, muchas órdenes admiten un dígito: Si borrar
+una linea es <code>C-k</code>, borrar 5 líneas será <code>M-5 C-k</code>, lo cual significa
+que se entra el dígito con la tecla <code>Alt</code> pulsada.</p>
+<h2 id="regiones">Regiones</h2>
+<pre><code>C-SCP (coloca una marca donde está el cursor como comienzo de un bloque)
+</code></pre>
+<p>flechas: por medio de las flechas o de las teclas de avance y
+retroceso de páginas se obtiene el final deseado del bloque.</p>
+<pre><code>M-w     (copia un bloque, cuando hay uno marcado)
+C-y     (pega el último bloque marcado o el último bloque cortado o la ultima línea borrada o el último grupo de líneas borradas (después de varias veces `C-k`)
+C-w     (corta el bloque marcado)
+C-x C-x (cambio entre la posición de la marca y del cursor)
+C-x C-u (cambia a mayúsculas la región marcada)
+C-x C-l (cambia a minúsculas la región marcada)
+</code></pre>
+<h2 id="rectángulos">Rectángulos</h2>
+<p>Los rectángulos se marcan de la misma forma que las regiones aunque
+visualmente aparece resaltada toda la región. Es decir, los
+rectángulos se marcan con <code>C-SCP</code> y las flecha.</p>
+<pre><code>C-x r k   (corta y copia el rectángulo)
+C-x r y   (pega un rectángulo donde está el cursor)
+C-x r o   (abre, en blanco, un espacio rectangular del tamaño del marcado. Hace los desplazamientos necesarios)
+C-x r c   (borra (deja en blanco) el espacio rectangular marcado pero no lo copia)
+C-x r d   (suprime el espacio rectangular marcado pero no lo copia)
+C-x r r 5 (copia el rect´angulo marcado, sin cortarlo, en el registro 5)
+C-x r i 5 (pega el rectángulo almacenado en el registro 5, en el sitio donde está el cursor)
+</code></pre>
+<h2 id="ventanas">Ventanas</h2>
+<pre><code>C-x 2 (división horizontal de la ventana en dos)
+C-x 3 (división vertical de la ventana en dos)
+C-x 1 (deja sólo la ventana activa abierta)
+C-x o (cambiar de ventana)
+C-x 0 (eliminar ventana actual)
+C-x { (la acorta en dirección horizontal)
+C-x ^ (la alarga en dirección vertical)
+C-x } (alarga la ventana activa en dirección horizontal)
+</code></pre>
+<h2 id="buffers">Buffers</h2>
+<pre><code>C-x b   (cambiar de buffer)
+C-x k   (cierra la buffer actual; pide confirmación)
+C-x C-b (lista buffers; cada archivo se abre en un buffer)
+</code></pre>
+<h2 id="marcas-por-si-queremos-volver-a-una-línea-más-adelante-o-de-aquí-a-varios-días">Marcas por si queremos volver a una línea más adelante o de aquí a varios días:</h2>
+<pre><code>C-x r m (solicita nombre para la línea marcada)
+C-x r b (ir a la línea marcada con el nombre que entremos, en este caso la “b”)
+C-x r l (lista todas las marcas)
+</code></pre>
+<h2 id="imprimir">Imprimir</h2>
+<pre><code>C-u M-x ps-print-buffer-with-faces (imprimir a ps. Luego con ps2pdf pasar a pdf)
+M-x print-buffer                   (imprimir archivo con numeración y cabeceras)
+M-x lpr-buffer                     (imprimir sin numeración ni cabeceras)
+M-x print-region                   (imprimir trozo seleccionado con numeración y cabeceras)
+M-x lpr-region                     (imprimir trozo seleccionado sin numeración ni cabeceras)
+</code></pre>
+<h2 id="expresiones-regulares-regexp">Expresiones Regulares (<code>regexp</code>)</h2>
+<pre><code>C-M-s                   búsqueda progresiva adelante de coincidencia de expresiones regulares
+C-M-r                   búsqueda progresiva hacia atrás de coincidencia de expresiones regulares 
+replace-regexp          reemplaza una cadena que coincide con una expresión regular
+query-replace-regexp    igual, pero consulta antes de cada reemplazo
+align-regexp            alinea, usando cadenas que coincidan con expresiones regulares como delimitadores
+highlight-regexp        resalta cadenas que coincidan con expresiones regulares
+occur                   muestra líneas que contienen una coincidencia
+multi-occur             muestra líneas en todos los buffers que contienen una coincidencia
+how-many                cuenta el número de cadenas que coinciden con la expresión regular
+keep-lines              eliminar todas las líneas, excepto las que contienen coincidencias
+flush-lines             elimina las líneas que contienen coincidencias
+grep                    llama a la orden grep de unix y pone el resultado en un buffer
+lgrep                   interfaz fácil de usar para la orden grep
+rgrep                   grep recursivo
+dired-do-copy-regexp    copia archivos con nombres que coincidan con expresiones regulares
+dired-do-rename-regexp  renombra archivos que coincidan con la expresión regular
+find-grep-dired         muestra archivos que contienen coincidencias para expresiones regulares con Dired
+</code></pre>
+<h2 id="varios">Varios</h2>
+<pre><code>M-x tetris                           (otros juegos: dunnet, snake, doctor, zone…)
+M-x help-with-tutorial-spec-language (abre buffer con los idiomas disponibles para el manual)
+F10                                  (abre la ayuda)
+C-x d                                (abre un directorio que se especifique)
+C-x RET f                   (entrar codificación de caracteres: latin-1-unix [latin1], utf-8-unix [utf8]..)
+</code></pre>
+<h2 id="introducir-órdenes-de-la-shell-durante-la-sesión-de-emacs">Introducir Órdenes de la Shell durante la Sesión de emacs</h2>
+<pre><code>C-z     (suspende la sesion emacs y entra en la shell. Volver a emacs con fg o con %emacs)
+M-!     (muestra en el mini buffer un mensaje para entrar un comando y lo abre un una ventana)
+C-u M-! (inserta la salida del comando en la posición del cursor)
+</code></pre>
+<h2 id="algunas-posibilidades">Algunas posibilidades</h2>
+<pre><code>M-x recover file            (levantar respaldo del archivo)
+M-x describe-key RET        (y presionando una combinación de teclas devuelve el comando asignado)
+M-x apropos RET print       (muestra información de “print”)
+M-x list-faces-display      (ver lista y muestra de los estilos disponibles)
+M-x list-packages           (abre en un nuevo buffer la lista de paquetes disponibles para instalar)
+M-x set-foreground-color    (pedirá color en inglés para las fuentes)
+M-x set-background-color    (pedirá color para el fondo)
+M-x w3m-browser-url         (pedirá url para conectar. Precisa w3m-el)
+M-x global-linum-mode       (mostras/esconder números de linea)
+M-x global-visual-line-mode (cortar/no cortar palabras al final de la pantalla)
+M-x global-hl-line-mode     (resaltar la linea donde está el cursor)
+M-x goto-line               (ir a una linea que se especifique)
+M-x insert file             (para insertar en el cursor un archivo)
+</code></pre>
+<h2 id="calendario">Calendario</h2>
+<pre><code>M-x calendar (abre el calendario)
+C-u M-x      (preguntará el mes y año que desea centrado en el calendario de tres meses; el calendario ocupa su propio buffer, cuyo modo principal es el modo Calendar)
+</code></pre>
+<h2 id="atajos-de-auc-tex-auctex">Atajos de AUC TeX (<code>auctex</code>)</h2>
+<p>Suponiendo que tenemos instalado el paquete complementario que
+llamamos Auctex y que facilita el uso con <code>emacs</code> de ficheros <code>.tex</code>
+(podemos hacerlo mediante <code>M-x list-packages</code> seleccionando <code>auctex</code>,
+si bien con Aquamacs está integrado por defecto):</p>
+<pre><code>C-c ; (marca como comentario un párrafo seleccionado o lo desmarca)
+C-c % (marca como comentario el párrafo en el que está el cursor)
+C-c ' (marca como comentario el párrafo en el que está el cursor)
+
+C-c C-e     (pide seleccionar un entorno LaTeX para escribir su esquema)
+C-c RET     (pide la macro que queremos insertar)
+C-c C-m     (pide la macro que queremos insertar)
+C-c C-f C-b (inserta la macro LaTeX \textbf{})
+C-c C-f C-c (inserta la macro LaTeX \textsc{}, pequeñas versales)
+C-c C-f C-d (borra fuente)
+C-c C-f C-e (inserta \emph{})
+C-c C-f C-f (inserta \textsf{})
+C-c C-f RET (inserta \textmd{})
+C-c C-f TAB (inserta \textit{})
+C-c C-f C-i (inserta \textit{})
+C-c C-f C-n (inserta \textnormal{})
+C-c C-f C-r (inserta \textrm{})
+C-c C-f C-s (inserta \textsl{})
+C-c C-f C-t (inserta \texttt{})
+C-c C-f C-u (inserta \textup{})
+C-c C-f u   (genera un cuadro informativo)
+
+C-c C-j     (inserte \item )
+M-RET       (inserta \item )
+
+M-C-a       (el cursor va a la línea de apertura del entorno actual)
+M-C-e       (el cursor va a la línea de cierre del entorno actual)
+</code></pre>
+
+    </section>
+
+    
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+	<div class="inner">
+		<section class="footer-social">
+      
+      <a href="//twitter.com/wildunix" target="_blank" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a>&nbsp;
+      
+      
+      
+      
+      
+      
+      <a href="//github.com/wildUnixBlog" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
+      
+      
+      
+      
+  </section>
+
+		<section class="copyright">&copy; 2020 <a href="https://wildunix.es"></a>. Licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></section>
+	</div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://wildunix.es/js/index.js"></script>
+<script src="https://wildunix.es/js/smooth-scroll.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+</body>
+</html>

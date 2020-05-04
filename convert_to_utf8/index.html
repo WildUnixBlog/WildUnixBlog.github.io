@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Cómo Cambiar la Codificación de un Fichero en Linux y Mac OS  &middot; </title>
+    
+    <meta name="description" content="Blog cooperativo de Yábir Benchakhtir y M. García dedicado a ayudar a usuarios de Unix y programadores de Python y Haskell">
+    <meta name="generator" content="Hugo 0.69.2" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- RSS autodiscovery -->
+    
+
+    <link rel="shortcut icon" href="https://wildunix.es/img/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://wildunix.es/css/screen.css">
+    <link rel="stylesheet" href="https://wildunix.es/css/github.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://wildunix.es/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://wildunix.es/favicon.ico">
+    
+
+    <!-- Stylesheet for theme color -->
+    <style type="text/css">
+    a, a:visited {color: #3498db;}
+    .pagination a {color: #3498db;}
+    .gist .gist-file .gist-meta a:visited {color: #3498db !important;}
+    a:focus, a:hover, a.excerptlink:hover {color: #2079b4;}
+    a.excerptlink:visited {color:inherit;}
+    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #2079b4;}
+    .older-posts:hover, .newer-posts:hover {color: #2079b4;}
+</style>
+
+</head>
+
+<body class="home-template">
+    <header id="site-head">
+	
+	<h1 class="blog-title"><a href="https://wildunix.es">WildUnix</a></h1>
+	
+	
+</header>
+    
+    
+    <main class="content" role="main">
+    
+<article class="post">
+    <header>
+        <h1 class="post-title">Cómo Cambiar la Codificación de un Fichero en Linux y Mac OS </h1>
+        <div class="post-meta">
+            <time datetime="08 February 2018">
+                08 February 2018
+            </time>
+        </div>
+    </header>
+
+    <section class="post-content">
+        <h2 id="introducción">Introducción</h2>
+<p>A veces recibimos ficheros <code>.wxm</code> hechos desde Windows que no podemos
+abrir con nuestro wxMaxima de Linux ni con el de Mac OS X. En el
+proceso de intentar abrirlos, wxMaxima ofrece dos mensajes (sacados de
+wxMaxima en Ubuntu 11.04):</p>
+<pre><code>wxMaxima encontró un error durante la carga
+/home/mi_usuario/Documentos/fichero.wxm
+
+Failed to convert file
+&quot;/home/mi_usuario/Documentos/fichero.wxm&quot;
+to Unicode.
+</code></pre>
+<p>y es el segundo el que nos brinda la pista definitiva de lo que
+ocurre. En efecto, parece sugerir que el fichero no está codificado en
+<code>utf-8</code> como causa de que wxMaxima no pueda abrir el documento. ¿Cómo
+salvar esta dificultad? Parece que lo razonable es cambiar la
+codificación de <code>fichero.wxm</code> produciendo el <code>fichero_utf8.wxm</code>, que sí
+podrá abrir wxMaxima, antes que tener un ordenador con Windows para
+abrir estos documentos problemáticos.</p>
+<p>Lo que sigue sirve para cambiar la codificación de toda clase de
+ficheros; en particular puede ser útil para ficheros <code>.tex</code>, entre
+otros. Para fijar ideas, haremos los ejemplos con el fichero <code>fichero.wxm</code></p>
+<p><a href="https://wildunix.es/files/fichero.wxm">hacer click para descargar fichero wxm</a></p>
+<p>que una vez descargado lo colocamos en:</p>
+<pre><code>/home/mi_usuario/Documentos
+</code></pre>
+<p>y si estamos usando Mac OS X, lo situaremos en:</p>
+<pre><code>/Users/mi_usuario/Documentos
+</code></pre>
+<h2 id="cómo-saber-la-codificación-de-un-fichero">Cómo Saber la Codificación de un Fichero</h2>
+<p>Para poder cambiar la codificación, lo primero es saber en qué está
+codificado el fichero problema, que  en nuestro ejemplo es
+<code>fichero.wxm</code>.</p>
+<p>Siempre desde la consola/terminal de órdenes, que tendremos abierta,
+nos posicionamos en el lugar donde está el fichero problema; en nuestro
+ejemplo conseguiremos esto con la orden de consola:</p>
+<pre><code>cd /home/mi_usuario/Documentos
+</code></pre>
+<p>o bien</p>
+<pre><code>cd /Users/mi_usuario/Documentos
+</code></pre>
+<p>si usamos Mac OS X. Ejecutaremos entonces la orden:</p>
+<pre><code>file -i fichero.wxm
+</code></pre>
+<p>y obtendremos la siguiente información:</p>
+<pre><code>fichero.wxm: text/x-c; charset=iso-8859-1
+</code></pre>
+<p>que nos dice que está codificado en <code>latin-1</code>, también conocido como
+<code>iso-8859-1</code>.</p>
+<h2 id="cómo-cambiar-la-codificación-de-un-fichero">Cómo Cambiar la Codificación de un Fichero</h2>
+<p>La orden que cambia la codificación en Linux, y en Mac OS X, es <code>iconv</code>.</p>
+<p>Una vez que hemos averiguado la codificación del fichero que queremos
+tratar, en nuestro ejemplo es <code>fichero.wxm</code>, averiguamos con qué nombre
+conoce <code>iconv</code> a esa codificación. Para ello ejecutaremos la orden de
+consola:</p>
+<pre><code>iconv -l
+</code></pre>
+<p>Se genera con ello una larguísima lista que contiene todos los
+conjuntos de caracteres conocidos.  Advierte el mensaje que esto no
+quiere decir necesariamente que todas las combinaciones de estos
+nombres se puedan usar como parámetros de <code>from</code> y de <code>to</code> en la línea
+de órdenes. Hay que tener en cuenta que un determinado conjunto de
+caracteres puede aparecer con varios nombres.</p>
+<p>Averiguamos, examinando esa lista, que la orden <code>iconv</code> entiende
+<code>iso-8859-1</code> como <code>ISO-8859-1</code> y que <code>utf-8</code> es para ella <code>UTF-8</code>. Tal
+nomenclatura es la que habremos de usar.</p>
+<p>En general, si queremos cambiar el fichero <code>fileCod01</code> de la
+codificación <code>cod01</code> al fichero <code>fileCod02</code> codificado en la
+codificación <code>cod02</code>, ejecutaremos la orden:</p>
+<pre><code>iconv -f cod1 -t cod2 -o fileCod02 fileCod01
+</code></pre>
+<p>La <code>f</code> es abreviatura de <code>from</code> y la <code>t</code> lo es de <code>to</code>. En nuestro
+ejemplo tendríamos que ejecutar la orden:</p>
+<pre><code>iconv -f ISO_8859-1 -t UTF-8 -o fichero_utf8.wxm fichero.wxm
+</code></pre>
+<p>El fichero <code>fichero_utf8.wxm</code> es idéntico a <code>fichero.wxm</code>, pero
+codificado en <code>UTF-8</code> en lugar de <code>iso-8859-1</code>. Ahora <code>fichero_utf8.wxm</code> sí
+puede ser abierto con nuestro wxMaxima de Linux y Mac OS X.</p>
+<p>Podemos someter a prueba el fichero <code>fichero_utf8.wxm</code> y constatar que
+efectivamente está cofificado en <code>UTF-8</code>. Para ello basta con usar de
+nuevo la orden <code>file</code>, obteniendo el siguiente diálogo:</p>
+<pre><code>file -i fichero_utf8.wxm 
+fichero_utf8.wxm: text/x-c; charset=utf-8
+</code></pre>
+<p>y &hellip; esto es todo por hoy.</p>
+
+    </section>
+
+    
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+	<div class="inner">
+		<section class="footer-social">
+      
+      <a href="//twitter.com/wildunix" target="_blank" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a>&nbsp;
+      
+      
+      
+      
+      
+      
+      <a href="//github.com/wildUnixBlog" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
+      
+      
+      
+      
+  </section>
+
+		<section class="copyright">&copy; 2020 <a href="https://wildunix.es"></a>. Licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></section>
+	</div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://wildunix.es/js/index.js"></script>
+<script src="https://wildunix.es/js/smooth-scroll.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+</body>
+</html>

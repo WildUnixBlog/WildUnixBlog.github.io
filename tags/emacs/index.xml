@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emacs on </title>
@@ -13,29 +13,30 @@
     
     <item>
       <title>Un Resumen de Atajos Fundamentales de emacs</title>
-      <link>https://wildunix.es/posts/emacs/</link>
+      <link>https://wildunix.es/emacs/</link>
       <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/emacs/</guid>
+      <guid>https://wildunix.es/emacs/</guid>
       <description>Introducción Cada usuario de emacs tiene sus atajos predilectos. A continución enumeramos los nuestros, los que atesoramos, los que más hemos usado con el paso del tiempo.
-La productividad está en proporción directa con el número de atajos usados; eres tanto más productivo cuanto menos llevas las manos al ratón. Es así como hemos comprendido que emacs es el mejor aliado en el escritorio, puede que también el único.</description>
+La productividad está en proporción directa con el número de atajos usados; eres tanto más productivo cuanto menos llevas las manos al ratón. Es así como hemos comprendido que emacs es el mejor aliado en el escritorio, puede que también el único.
+El Manual en Español Manual de emacs en español</description>
     </item>
     
     <item>
       <title>Adecuar emacs para usar Pdflatex y Evince por defecto</title>
-      <link>https://wildunix.es/posts/emacs_evince/</link>
+      <link>https://wildunix.es/emacs_evince/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/emacs_evince/</guid>
+      <guid>https://wildunix.es/emacs_evince/</guid>
       <description>Introducción Por alguna razón que desconocemos, nuestro dúo preferido para editar ficheros LaTeX &amp;mdash;emacs y auxtex&amp;mdash; no viene preconfigurado en Ubuntu para usar por defecto el formato pdflatex y el visor Evince. Por una parte creemos desfasado compilar con LaTeX para crear un .dvi y por otra, la mayoría de visores no actualizan automáticamente un .pdf si éste ha sido modificado; no es el caso de Evince. Por tanto, queremos que al compilar los .</description>
     </item>
     
     <item>
       <title>Instalar ELPA para Emacs 23</title>
-      <link>https://wildunix.es/posts/instalar-elpa-para-emacs-23/</link>
+      <link>https://wildunix.es/instalar-elpa-para-emacs-23/</link>
       <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/instalar-elpa-para-emacs-23/</guid>
+      <guid>https://wildunix.es/instalar-elpa-para-emacs-23/</guid>
       <description>Introducción Los usuarios de Emacs saben de su editor preferido varias cosas: la independencia que les ha proporcionado del ratón por vernir de un tiempo en el que se vivía sin ratón, la sensación de control pleno que les confiere, la potencia del mismo y también la dificultad de su configuración al ir un poquitín más allá de lo elemental.
 En particular es complicada la gestión de instalar complementos para Emacs.</description>
     </item>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Adecuar emacs para usar Pdflatex y Evince por defecto &middot; </title>
+    
+    <meta name="description" content="Blog cooperativo de Yábir Benchakhtir y M. García dedicado a ayudar a usuarios de Unix y programadores de Python y Haskell">
+    <meta name="generator" content="Hugo 0.69.2" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- RSS autodiscovery -->
+    
+
+    <link rel="shortcut icon" href="https://wildunix.es/img/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://wildunix.es/css/screen.css">
+    <link rel="stylesheet" href="https://wildunix.es/css/github.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://wildunix.es/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://wildunix.es/favicon.ico">
+    
+
+    <!-- Stylesheet for theme color -->
+    <style type="text/css">
+    a, a:visited {color: #3498db;}
+    .pagination a {color: #3498db;}
+    .gist .gist-file .gist-meta a:visited {color: #3498db !important;}
+    a:focus, a:hover, a.excerptlink:hover {color: #2079b4;}
+    a.excerptlink:visited {color:inherit;}
+    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #2079b4;}
+    .older-posts:hover, .newer-posts:hover {color: #2079b4;}
+</style>
+
+</head>
+
+<body class="home-template">
+    <header id="site-head">
+	
+	<h1 class="blog-title"><a href="https://wildunix.es">WildUnix</a></h1>
+	
+	
+</header>
+    
+    
+    <main class="content" role="main">
+    
+<article class="post">
+    <header>
+        <h1 class="post-title">Adecuar emacs para usar Pdflatex y Evince por defecto</h1>
+        <div class="post-meta">
+            <time datetime="08 March 2018">
+                08 March 2018
+            </time>
+        </div>
+    </header>
+
+    <section class="post-content">
+        <h2 id="introducción">Introducción</h2>
+<p>Por alguna razón que desconocemos, nuestro dúo preferido para editar ficheros LaTeX &mdash;emacs y auxtex&mdash; no viene preconfigurado en Ubuntu para usar por defecto el formato <code>pdflatex</code> y el visor <code>Evince</code>. Por una parte creemos desfasado compilar con LaTeX para crear un <code>.dvi</code> y por otra, la mayoría de visores no actualizan automáticamente un <code>.pdf</code> si éste ha sido modificado; no es el caso de Evince. Por tanto, queremos que al compilar los <code>.tex</code> desde emacs+auctex actúe <code>pdflatex</code> y que bajo demanda se abra el <code>.pdf</code> generado mediante Evince &hellip; y por suerte emacs es muy configurable.</p>
+<p>Suponemos ya instalado en nuestro Ubuntu <code>emacs</code>, TeX Live y <code>auctex</code> (cfr. <a href="https://wildunix.es/posts/instalar-tex-live-en-ubuntu-mac-os-y-windows/">Instalar TeX Live en Ubuntu, Mac OS y Windows</a>.)</p>
+<p>Este post fue elaborado en colaboración con D. Alberto Rodríguez.</p>
+<h2 id="procedimiento">Procedimiento</h2>
+<p>Seguiremos los siguientes pasos:</p>
+<ul>
+<li>
+<p>Abrimos cualquier fichero .tex que tengamos a mano.</p>
+</li>
+<li>
+<p>Pulsamos en &ldquo;LaTeX&rdquo; del menú contextual de emacs.</p>
+</li>
+<li>
+<p>Posicionamos el cursor en &ldquo;Customize AUCTeX&rdquo; y pulsamos en &ldquo;Extend this Menu&rdquo;.</p>
+</li>
+<li>
+<p>Volvemos a pulsar en &ldquo;LaTeX&rdquo; y poner el cursor sobre &ldquo;Customize AUCTeX&rdquo; &hellip; ahora aparecerá un menú más amplio, como era de esperar.</p>
+</li>
+<li>
+<p>Nos posicionaremos sobre &ldquo;Tex Command&rdquo; y luego sobre &ldquo;Tex Pdf Mode&hellip;&rdquo; del submenú; haremos clic y veremos que se abre una nueva página. Se trata de operar sobre ella.</p>
+</li>
+<li>
+<p>Veremos el apartado &ldquo;Tex Pdf Mode&rdquo; y debe estar en &ldquo;off (nill)&quot;. Esto debe cambiar y para ello pulsamos sobre la tecla &ldquo;Toggle&rdquo; y ahora aparecerá a &ldquo;on (non-nill)&quot;. Es necesario guardar lo hecho, por lo que pulsaremos sobre el botón &ldquo;Save for future sessions&rdquo;. Con esto AUCTeX compilará ahora los .tex con pdflatex y generará ficheros .pdf. Pulsamos sobre el botón &ldquo;Exit&rdquo;.</p>
+</li>
+<li>
+<p>Seguidamente pulsamos de nuevo sobre &ldquo;Latex&rdquo; y pulsamos  sobre &ldquo;Customize AUCTeX &gt; Tex Command &gt; Tex View &gt; Tex View&hellip;&quot;. Vamos a &ldquo;Tex Source Correlate Method&rdquo; y:</p>
+<ul>
+<li>
+<p>Pulsamos en el botón &ldquo;Value Menu&rdquo; y seleccionamos &ldquo;synctex&rdquo;. Pulsamos en el botón &ldquo;State&rdquo; y marcamos &ldquo;Save for Future Sessions&rdquo;.</p>
+</li>
+<li>
+<p>Pulsamos en &ldquo;Value Menu&rdquo; de la sección &ldquo;Tex Source Correlate Start Server&rdquo; y marcamos &ldquo;Always&rdquo;.</p>
+</li>
+<li>
+<p>Pulsamos en el botón &ldquo;State&rdquo; y marcamos &ldquo;Save for Future Sessions&rdquo;.</p>
+</li>
+<li>
+<p>Pulsamos en &ldquo;Toggle&rdquo; de la sección &ldquo;Tex Source Correlate Mode&rdquo;. Pulsamos en el botón &ldquo;State&rdquo; y marcamos &ldquo;Save for Future Sessions&rdquo;.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Pulsamos sobre el botón &ldquo;Exit&rdquo;.</p>
+<ul>
+<li>
+<p>Para seleccionar a Evince o Okular  como visor predeterminado de pdf:</p>
+<ul>
+<li>
+<p>Pulsamos de nuevo sobre &ldquo;Latex&rdquo; y pulsamos sobre &ldquo;Customize AUCTeX &gt; Tex Command &gt; Tex View &gt; Tex View Program List&hellip;&rdquo; y pulsamos sobre el botón &ldquo;INS&rdquo; y rellenamos el formulario como sigue:</p>
+<ul>
+<li>
+<p>en &ldquo;Name:&rdquo; escribimos:  Evince.</p>
+</li>
+<li>
+<p>si no vemos junto a &ldquo;Value Menu&rdquo; la palabra &ldquo;Command:&quot;, pulsamos en dicho botón y seleccionamos &ldquo;Command&rdquo;.</p>
+</li>
+<li>
+<p>En &ldquo;Command:&rdquo; escribimos: <code>evince --page-index=%(outpage) %o</code></p>
+</li>
+<li>
+<p>Pulsamos en &ldquo;State&rdquo; y seleccionamos &ldquo;Save for Future Sessions&rdquo;.</p>
+</li>
+<li>
+<p>Pulsamos sobre el botón &ldquo;Exit&rdquo;.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Pulsamos de nuevo sobre &ldquo;Latex&rdquo; y pulsamos  sobre &ldquo;Customize AUCTeX &gt; Tex Command &gt; Tex View &gt; Tex View Program Selection..&rdquo; y pulsamos sobre el botón &ldquo;INS&rdquo; y rellenamos el formulario como sigue:</p>
+<ul>
+<li>
+<p>Pulsamos sobre el primer botón de &ldquo;Value Menu&rdquo; y seleccionamos &ldquo;Single predicate&rdquo;</p>
+</li>
+<li>
+<p>Pulsamos en el  botón &ldquo;Value Menu&rdquo; contiguo y seleccionamos &ldquo;output-pdf&rdquo;.</p>
+</li>
+<li>
+<p>En &ldquo;Viewer&rdquo; pulsamos su botón correspondiente de &ldquo;Value Menu&rdquo; y seleccionamos &ldquo;Evince&rdquo;.</p>
+</li>
+<li>
+<p>Pulsamos en &ldquo;State&rdquo; y seleccionamos &ldquo;Save for Future Sessions&rdquo;.</p>
+</li>
+<li>
+<p>Pulsamos sobre el botón &ldquo;Exit&rdquo;.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Ahora cerramos emacs y si volvemos a abrir con él algún <code>.tex</code>, veremos que funciona como deseábamos.</p>
+<p>Como complemento y en relación con ello, les recomendamos leer este post nuestro.</p>
+<h2 id="para-los-que-prefiren-okular">Para los que prefiren Okular</h2>
+<p>Si alguno de los lectores prefiere Okular en lugar de Evince, como visor de pdf,  puede seguir las indicaciones  que encontrará <a href="http://mathieu.3maisons.org/wordpress/how-to-configure-emacs-and-auctex-to-work-with-a-pdf-viewer">aquí</a>.</p>
+<p>Y &hellip; esto es todo por hoy.</p>
+
+    </section>
+
+    
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+	<div class="inner">
+		<section class="footer-social">
+      
+      <a href="//twitter.com/wildunix" target="_blank" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a>&nbsp;
+      
+      
+      
+      
+      
+      
+      <a href="//github.com/wildUnixBlog" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
+      
+      
+      
+      
+  </section>
+
+		<section class="copyright">&copy; 2020 <a href="https://wildunix.es"></a>. Licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></section>
+	</div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://wildunix.es/js/index.js"></script>
+<script src="https://wildunix.es/js/smooth-scroll.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+</body>
+</html>

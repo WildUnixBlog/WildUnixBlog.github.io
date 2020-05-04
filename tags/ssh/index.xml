@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ssh on </title>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Acceder a un servidor mediante ssh y un certificado</title>
-      <link>https://wildunix.es/posts/acceder-a-un-servidor-mediante-ssh-y-un-certificado/</link>
+      <link>https://wildunix.es/acceder-a-un-servidor-mediante-ssh-y-un-certificado/</link>
       <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/acceder-a-un-servidor-mediante-ssh-y-un-certificado/</guid>
+      <guid>https://wildunix.es/acceder-a-un-servidor-mediante-ssh-y-un-certificado/</guid>
       <description>Introducción Cuando no es abierta una cuenta en un servidor, el administrador tiene un problema, cual es hacernos llegar la contraseña. Si la envía en abierto, estará comprometida; si la envía cifrada, ¿hasta cuándo puede extenderse la labor de compartir contraseñas?
 La solución a esta dificultad se basa en facilitar el acceso del usuario mediante el uso de certificados. El administrador: abrirá la cuenta, habilitará el servidor para poder acceder a las cuentas mediante certificados, notificará al usuario que su cuenta está abierta y quedará a la espera del certificado público de acceso.</description>
     </item>

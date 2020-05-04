@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>latex on </title>
@@ -13,39 +13,40 @@
     
     <item>
       <title>Un Resumen de Atajos Fundamentales de emacs</title>
-      <link>https://wildunix.es/posts/emacs/</link>
+      <link>https://wildunix.es/emacs/</link>
       <pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/emacs/</guid>
+      <guid>https://wildunix.es/emacs/</guid>
       <description>Introducción Cada usuario de emacs tiene sus atajos predilectos. A continución enumeramos los nuestros, los que atesoramos, los que más hemos usado con el paso del tiempo.
-La productividad está en proporción directa con el número de atajos usados; eres tanto más productivo cuanto menos llevas las manos al ratón. Es así como hemos comprendido que emacs es el mejor aliado en el escritorio, puede que también el único.</description>
+La productividad está en proporción directa con el número de atajos usados; eres tanto más productivo cuanto menos llevas las manos al ratón. Es así como hemos comprendido que emacs es el mejor aliado en el escritorio, puede que también el único.
+El Manual en Español Manual de emacs en español</description>
     </item>
     
     <item>
       <title>Adecuar emacs para usar Pdflatex y Evince por defecto</title>
-      <link>https://wildunix.es/posts/emacs_evince/</link>
+      <link>https://wildunix.es/emacs_evince/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/emacs_evince/</guid>
+      <guid>https://wildunix.es/emacs_evince/</guid>
       <description>Introducción Por alguna razón que desconocemos, nuestro dúo preferido para editar ficheros LaTeX &amp;mdash;emacs y auxtex&amp;mdash; no viene preconfigurado en Ubuntu para usar por defecto el formato pdflatex y el visor Evince. Por una parte creemos desfasado compilar con LaTeX para crear un .dvi y por otra, la mayoría de visores no actualizan automáticamente un .pdf si éste ha sido modificado; no es el caso de Evince. Por tanto, queremos que al compilar los .</description>
     </item>
     
     <item>
       <title>Crear un QRC con LaTeX e incluirlo en un fichero LaTeX</title>
-      <link>https://wildunix.es/posts/qrc_latex/</link>
+      <link>https://wildunix.es/qrc_latex/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/qrc_latex/</guid>
+      <guid>https://wildunix.es/qrc_latex/</guid>
       <description>Introducción Los usuarios de LaTeX se muestran reacios a usar otras herramientas si pueden servirse de su preciado compilador para editar y que se comporta como una verdadera imprenta. En este post venimos a ayudarlos y a darles una razón más para seguir con &amp;ldquo;LaTeX para todo&amp;rdquo;.
 No hay que glosar la gran utilidad que tiene hoy codificar las direcciones de internet en códigos QR de forma que se pueda acceder a ellas desde dispositivos móviles.</description>
     </item>
     
     <item>
       <title>Adecuar Arabtex al convenio de transcripción de la Escuela de Arabistas de Granada</title>
-      <link>https://wildunix.es/posts/adecuar-arabtex-al-convenio-de-transcripcion-de-la-escuela-de-arabistas-de-granada/</link>
+      <link>https://wildunix.es/adecuar-arabtex-al-convenio-de-transcripcion-de-la-escuela-de-arabistas-de-granada/</link>
       <pubDate>Sun, 28 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://wildunix.es/posts/adecuar-arabtex-al-convenio-de-transcripcion-de-la-escuela-de-arabistas-de-granada/</guid>
+      <guid>https://wildunix.es/adecuar-arabtex-al-convenio-de-transcripcion-de-la-escuela-de-arabistas-de-granada/</guid>
       <description>Introducción Por alguna razón que se nos escapa ahora mismo, los estudiantes de letras no usan LaTeX, cuando las dificultades de LaTeX están en la edición científica. La edición científica tiene la dificultad y la potencia; la edición humanística, en cambio, no tiene la dificultad y sí la potencia.
 Nuestro deseo es difundir el software libre también entre los humanistas y los artistas, así que hoy traemos aquí un modo de escribir árabe con LaTeX, a través de Arabtex.</description>
     </item>
